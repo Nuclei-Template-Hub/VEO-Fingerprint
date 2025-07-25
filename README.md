@@ -341,7 +341,7 @@ admin-panel:
     - "status_code == 200"
     - "contains(body, 'username')"
     - "contains(body, 'password')"
-	tags: admin-page
+   tags: admin-page
 ```
 
 ### 案例3：识别特定框架版本
@@ -353,7 +353,7 @@ spring-boot:
     - "regex(body, 'spring-boot-starter-[a-z]+')"
     - "contains(body, 'Whitelabel Error Page')"
   condition: or
-	tags: java
+  tags: java
 ```
 
 ### 案例4：主动探测API
