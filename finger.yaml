@@ -97,23 +97,6 @@ apache-tomcat:
   dsl:
     - "icon('/favicon.ico', '4644f2d45601037b8423d45e13194c93')"
 
-apache-unomi:
-  dsl:
-    - "contains(body, 'logo apache unomi')"
-
-apache-wicket:
-  dsl:
-    - "contains(body, '/org.apache.wicket.')"
-
-apache2-ubuntu:
-  dsl:
-    - "contains(body, 'Apache2 Ubuntu Default Page')"
-    - "contains(body, 'ubuntu-logo.png')"
-
-apc-management:
-  dsl:
-    - "contains(body, 'this object on the apc management web server is protected')"
-
 apereo-cas:
   dsl:
     - "contains(body, 'cas &#8211; central authentication service')"
@@ -190,26 +173,6 @@ aspnet-requestvalidationmode:
 asproxy:
   dsl:
     - "contains(body, 'btnasproxydisplaybutton')"
-
-astaro-command-center:
-  dsl:
-    - "contains(body, 'commandcenter')"
-
-asterisk:
-  dsl:
-    - "contains(body, 'asterisk_rawmanpath')"
-
-asus-aicloud:
-  dsl:
-    - "contains(body, 'href=\"/smb/css/startup.png\"')"
-
-asynqmon:
-  dsl:
-    - "icon('/favicon.ico', '7d56c3bcc4d9522bdc958785f1866776')"
-
-atfuture-system:
-  dsl:
-    - "contains(body, '/content/web/theme/skin01/img/p_login_logo01.png')"
 
 atlassian-jira:
   dsl:
@@ -335,14 +298,6 @@ barracuda-ssl-vpn:
   dsl:
     - "contains(body, 'barracuda ssl vpn')"
 
-basic-php-events-lister:
-  dsl:
-    - "contains(body, 'powered by: <a href=\"http://www.mevin.com/\">')"
-
-bbpress:
-  dsl:
-    - "contains(body, 'is proudly powered by <a href=\"http://bbpress.org')"
-
 bees_cms:
   dsl:
     - "contains(body, 'mx_form/mx_form.php')"
@@ -375,9 +330,6 @@ bicesoft-super-custom-survey-voting-system:
   dsl:
     - "contains(body, '佰思超强自定义问卷调查系统bicesoft.com')"
 
-biept-system:
-  dsl:
-    - "contains(body, 'class=\"loginin loginin1\"')"
 
 bigdump:
   dsl:
@@ -386,27 +338,6 @@ bigdump:
 bilin-uag:
   dsl:
     - "contains(body, '智慧网关配置平台')"
-
-billingtesttool:
-  dsl:
-    - "contains(body, \"href:'/billtool/querysum'\")"
-
-bio-lims:
-  dsl:
-    - "contains(body, '/lims/dist/css/font-awesome.min.css')"
-
-biscom-delivery-server:
-  dsl:
-    - "contains(body, '/bds/includes/fdsjavascript.do')"
-
-bit-service:
-  dsl:
-    - "contains(body, 'bit-xxzs')"
-    - "contains(body, 'xmlpzs/webissue.asp')"
-
-bitbucket:
-  dsl:
-    - "contains(body, 'bitbucket.page.login')"
 
 bithighway-product:
   dsl:
@@ -432,62 +363,6 @@ blogenginenet:
   dsl:
     - "contains(body, 'http://www.dotnetblogengine.net')"
 
-blogger:
-  dsl:
-    - "contains(body, 'powered by blogger')"
-
-blueonyx:
-  dsl:
-    - "contains(body, 'thank you for using the blueonyx')"
-
-bluepacific-network-monitoring-system:
-  dsl:
-    - "contains(body, '/biradarserver/web/')"
-
-bluepacific-share-content-management-system:
-  dsl:
-    - "contains(body, '/visadmin/viscms/index.do')"
-
-boastmachine:
-  dsl:
-    - "contains(body, 'powered by <a href=\"http://boastology.com')"
-
-bossmail:
-  dsl:
-    - "contains(body, 'href=\"http://apps.microsoft.com/windows/zh-cn/app/bossmail/24f4bdb3-1bca-467e-9dd9-15a5d278aec6')"
-
-bowen-providence-car-loading-reservation-system:
-  dsl:
-    - "contains(body, '/public/base/js/plugins/crypto/rsa.js')"
-
-boxiao-system:
-  dsl:
-    - "contains(body, \"var bxnstaticresroot='/bxn-static-resource/resources'\")"
-
-brewblogger:
-  dsl:
-    - "contains(body, 'developed by <a href=\"http://www.zkdigital.com')"
-
-bridge5asia-amss:
-  dsl:
-    - "contains(body, '/statics/js/mdo-angular-cryptography.js')"
-
-broadcom-ca-pam:
-  dsl:
-    - "contains(body, '/cspm/cleansession.jsp')"
-
-brocade-data-angle-guard-database:
-  dsl:
-    - "contains(body, 'window.location.host + \"/agweb\"')"
-
-brocade-network-advisor:
-  dsl:
-    - "contains(body, '<span class=\"ui-menuitem-text\">about network advisor</span></a>')"
-
-browsercms:
-  dsl:
-    - "contains(body, 'content=\"browsercms')"
-
 bt-control-pane:
   dsl:
     - "contains(body, '入口校验失败')"
@@ -504,26 +379,6 @@ bulletlink-newspaper-template:
   dsl:
     - "contains(body, 'powered by bulletlink')"
 
-bullwark:
-  dsl:
-    - "contains(body, '<title>Bullwark Momentum Series</title>')"
-
-burning-board-lite:
-  dsl:
-    - "contains(body, 'powered by <b>burning board')"
-
-business-paperless-system:
-  dsl:
-    - "contains(body, '//获取营业台席pc机 ip地址 mac地址')"
-
-business-system:
-  dsl:
-    - "contains(body, 'function updatapipelinepipelinename')"
-
-bxemail:
-  dsl:
-    - "contains(body, '请输入正确的电子邮件地址，如：abc@bxemail.com')"
-
 byzoro:
   dsl:
     - "contains(body, '<title> technology, inc.</title>')"
@@ -533,21 +388,9 @@ c-lodop:
   dsl:
     - "contains(body, 'document.getelementbyid\"reqid\".value==document.getelementbyid\"licid\".value')"
 
-cacti:
-  dsl:
-    - "icon('/favicon.ico', '4f12cccd3c42a4a478f067337fe92794')"
-
-calendarscript:
-  dsl:
-    - "contains(body, 'powered by <a href=\"http://www.calendarscript.com')"
-
 cameralife:
   dsl:
     - "contains(body, 'this site is powered by camera life')"
-
-campsite:
-  dsl:
-    - "contains(body, 'content=\"campsite')"
 
 campus-card-management-system:
   dsl:
@@ -719,45 +562,9 @@ cirrusgate-system:
   dsl:
     - "contains(body, 'window.location.href = \"/dlp/admin/user/login.action\"')"
 
-cisco-acs:
-  dsl:
-    - "contains(body, 'href=\"/acsadmin\">launch acs')"
-
-cisco-expressway:
-  dsl:
-    - "contains(body, 'expressway-e</legend>')"
-
-cisco-imc-supervisor:
-  dsl:
-    - "contains(body, 'cisco imc supervisor')"
-
 cisco-iox:
   dsl:
     - "contains(body, 'var g_url_version = \"/iox/api/v2\"')"
-
-cisco-meeting-app:
-  dsl:
-    - "contains(body, '<div id=\"cisco_meeting_application\">')"
-
-cisco-nexus-data-broker:
-  dsl:
-    - "contains(body, \"window.location.href = '/monitor';\")"
-
-cisco-prime-infrastructure:
-  dsl:
-    - "contains(body, 'webacs/welcomeaction.do')"
-
-cisco-prime-network-registrar:
-  dsl:
-    - "contains(body, 'productname=\"network registrar')"
-
-cisco-ucm:
-  dsl:
-    - "contains(body, '/ccmadmin/')"
-
-cisco-ucs-director:
-  dsl:
-    - "contains(body, 'cisco ucs director')"
 
 cisco-webex:
   dsl:
@@ -804,50 +611,6 @@ citrix-xenserver:
   dsl:
     - "contains(body, '<a href=\"xencentersetup.exe\">xencenter installer</a>')"
 
-ciuiscrm:
-  dsl:
-    - "contains(body, '<div class=\"ciuis-body-content\">')"
-
-claroline:
-  dsl:
-    - "contains(body, 'http://www.claroline.net\" rel=\"copyright')"
-
-clientexec:
-  dsl:
-    - "contains(body, 'powered by clientexec')"
-
-clipbucket:
-  dsl:
-    - "icon('/favicon.ico', '6c633b9b92530843c782664cb3f0542d')"
-
-clipshare:
-  dsl:
-    - "contains(body, 'powered by <a href=\"http://www.clip-share.com')"
-
-cloodie-his:
-  dsl:
-    - "contains(body, 'href=\"/design/design/cloodie.css')"
-
-cloudera-manager:
-  dsl:
-    - "contains(body, 'var loginpageurl = \"/cmf/login\";')"
-
-cloudroom-meeting:
-  dsl:
-    - "contains(body, 'src=\"/companyimage/agents/sdk-logo.png\"')"
-
-cloudwise-dodp:
-  dsl:
-    - "contains(body, '/public/vendor/monaco/vs/loader.js')"
-
-cmailserver:
-  dsl:
-    - "contains(body, '<input type=checkbox name=\"saveuserpass')"
-
-cms4j:
-  dsl:
-    - "contains(body, 'method=\"post\" name=\"cms4jsearchform\" id=\"cms4jsearchform')"
-
 cmseasy:
   dsl:
     - "contains(body, 'content=\"cmseasy')"
@@ -856,10 +619,6 @@ cmspro:
   dsl:
     - "contains(body, '开普互联')"
     - "contains(body, 'CMS内容管理系统')"
-
-cmstop:
-  dsl:
-    - "contains(body, '<a class=\"poweredby\" href=\"http://www.cmstop.com\"')"
 
 cmstuan:
   dsl:
@@ -877,83 +636,13 @@ cnpower-oa:
   dsl:
     - "contains(body, '/oaapp/webobjects/oaapp.woa')"
 
-cnrdm-product:
-  dsl:
-    - "contains(body, '登录青铜器rdm</b></div>')"
-
-cns-corenetwork-services:
-  dsl:
-    - "contains(body, '<span class=\"left\">cns-app ')"
-
-cnvp-jcms:
-  dsl:
-    - "contains(body, 'publish by jcms2010')"
-
-cnway-ilims:
-  dsl:
-    - "contains(body, '/js/allpagefunction.js')"
-
-cockpit:
-  dsl:
-    - "contains(body, 'cockpit/static/login.js')"
-    - "contains(body, 'cockpit/static/login.css')"
-
-codepush-server:
-  dsl:
-    - "contains(body, 'content=\"codepush service is hotupdate services')"
-
-codesys-webvisu:
-  dsl:
-    - "contains(body, '<applet codebase=. code=webvisu/webvisu.class name=\"webvisu')"
-
-codiad:
-  dsl:
-    - "contains(body, 'CodiMD')"
-    - "contains(body, 'hackmd')"
-
-cogent-datahub:
-  dsl:
-    - "contains(body, '/images/cogent.gif')"
-
-colasoft-mdp:
-  dsl:
-    - "contains(body, '<div id=\"processtime\" time=\"0.000033\" >#processtime</div>')"
-
 colasoft-network-information-comprehensive-detection-and-processing-platform:
   dsl:
     - "contains(body, '科来网络信息综合检测处理平台')"
 
-colasoft-tsa:
-  dsl:
-    - "contains(body, 'nfr=\"true\"')"
-
-coldfusion:
-  dsl:
-    - "contains(body, '<cfscript>')"
-
 collaborative-management-platform:
   dsl:
     - "contains(body, '/web/submitlogon2.do ')"
-
-collectionsystem:
-  dsl:
-    - "contains(body, 'upgrade/ocx/ccdmsshell.cab#version')"
-
-colorfulcube-traffic-management:
-  dsl:
-    - "contains(body, 'checkcode.aspx')"
-
-comcast-business:
-  dsl:
-    - "contains(body, 'cmn/css/common-min.css')"
-
-comexe-ras:
-  dsl:
-    - "contains(body, 'href=\"cmxlogin.php\"')"
-
-commonspot:
-  dsl:
-    - "contains(body, 'content=\"commonspot')"
 
 confluence:
   dsl:
@@ -993,34 +682,6 @@ cpanel:
     - "contains(body, 'cpanel_magic_revision')"
     - "contains(body, 'go.cpanel.net')"
 
-crmeb:
-  dsl:
-    - "contains(body, '<h1>crmeb</h1>')"
-
-crow-force-portal-cms:
-  dsl:
-    - "contains(body, '中企动力提供技术支持')"
-
-cscms:
-  dsl:
-    - "contains(body, '/js/cscms.js')"
-
-ctop-oa:
-  dsl:
-    - "contains(body, 'src=\"images/ctop_logo.gif')"
-
-cuisec-system:
-  dsl:
-    - "contains(body, 'r=e&&e.__esmodule?function')"
-
-customer-service-operations-management-system:
-  dsl:
-    - "contains(body, '<div class=\"count-down\">页面在<em>5</em>秒后自动跳转至您有权限的页面</div>')"
-
-cwp-controlpanel:
-  dsl:
-    - "contains(body, 'src=\"/login/cwp_theme/original/img/new_logo_small.png\"')"
-
 d-link:
   dsl:
     - "icon('/favicon.ico', '107579220745d3b21461c23024d6c4a3')"
@@ -1033,22 +694,6 @@ dahua-wpms:
 dandian-crm:
   dsl:
     - "contains(body, '客户关系管理-crm')"
-
-das-intellitech-c3:
-  dsl:
-    - "contains(body, 'window.location.href=\"single/empmain2.aspx')"
-
-das-usmb:
-  dsl:
-    - "contains(body, 'src=\"loadoem?path=login-logo.png')"
-
-datalife-engine:
-  dsl:
-    - "contains(body, 'content=\"datalife engine')"
-
-datanet:
-  dsl:
-    - "contains(body, \"href='/scada'>datanet scada interface\")"
 
 dayrui-cms:
   dsl:
@@ -1066,10 +711,6 @@ dcn:
   dsl:
     - "contains(body, 'dcfos web management')"
 
-debian:
-  dsl:
-    - "contains(body, '<h1>welcome to nginx on debian!</h1>')"
-
 dedecms:
   dsl:
     - "contains(body, '<div><h3>dedecms error warning!</h3>')"
@@ -1077,47 +718,6 @@ dedecms:
 dejavu:
   dsl:
     - "contains(body, 'Dejavu, the missing Web UI for Elasticsearch')"
-
-dell-n1108p-on:
-  dsl:
-    - "contains(body, 'class=\"login_server_default\">n1108p-on')"
-
-dell-navisphere-express:
-  dsl:
-    - "contains(body, 'parent.main.location = urlnonst + \"?nst=\" + top.menu.securitytoken')"
-
-dell-networker-management-console:
-  dsl:
-    - "contains(body, 'emc corporation')"
-
-dell-open-manage:
-  dsl:
-    - "contains(body, '<img title=\"open manage\" alt=\"open manage')"
-
-dell-openmanage:
-  dsl:
-    - "contains(body, \"url=/servlet/omsalogin?msgstatus='\")"
-
-
-dell-unisphere:
-  dsl:
-    - "contains(body, 'unisphere for sc series')"
-
-deluxebb:
-  dsl:
-    - "contains(body, 'content=\"powered by deluxebb')"
-
-deshang-dsmall:
-  dsl:
-    - "contains(body, '/static/plugins/js/dialog/dialog.js\" id=\"dialog_js\"')"
-
-destoon:
-  dsl:
-    - "contains(body, 'destoon_moduleid')"
-
-devaldi-flexpaper:
-  dsl:
-    - "contains(body, 'href=\"http://flexpaper.devaldi.com/plugins.htm\"')"
 
 dhc-oa:
   dsl:
@@ -1138,18 +738,6 @@ diaowen-system:
 differsoft-itsystem:
   dsl:
     - "contains(body, 'name=\"tbzcode\"')"
-
-digitalguardian-system:
-  dsl:
-    - "contains(body, 'href=\"/brands/guardian/favicon.ico\"')"
-
-digiwin-system:
-  dsl:
-    - "contains(body, 'class=\"common_footer1030_textfontlink\"')"
-
-dingruan-cgm:
-  dsl:
-    - "contains(body, \"id='cgm' style='background-image\")"
 
 discuz:
   dsl:
@@ -6645,70 +6233,6 @@ chart-js:
   dsl:
     - "contains(body, 'chart.min.js')"
 
-chinaiwb-intelligent-firewal:
-  dsl:
-    - "contains(body, 'style=\"background:urlimages/login.gif no-repeat center\"')"
-
-chinamobile-jx01:
-  dsl:
-    - "contains(body, 'background=\"/images/loginbg.gif\"')"
-
-cisco-cvr328w-k9-cn:
-  dsl:
-    - "contains(body, \"pidname='cvr328w-k9-cn'\")"
-
-cisco-ip-phone:
-  dsl:
-    - "contains(body, \"<font color='#ffffff' size='4'>cisco ip phone\")"
-
-cisco-router:
-  dsl:
-    - "contains(body, 'src=\"/images/login_progress.gif')"
-
-cisco-sa520w:
-  dsl:
-    - "contains(body, 'class=\"h3login\">small business pro')"
-
-cisco-switch:
-  dsl:
-    - "contains(body, '<frame src=\"dashboard.shtml')"
-
-cisco-unified-ip-phone:
-  dsl:
-    - "contains(body, '/cgi/java/serviceability?adapter=device.statistics.device')"
-
-cisco-wireless-lan-controller:
-  dsl:
-    - "contains(body, 'cisco systems login')"
-
-citrix-company-s-product:
-  dsl:
-    - "contains(body, 'netscape/firefox/opera')"
-
-cloudflare:
-  dsl:
-    - "contains(body, 'var cloudflare=')"
-
-colasoft-ras:
-  dsl:
-    - "contains(body, 'nfr=\"true\"')"
-
-contrexxcms:
-  dsl:
-    - "contains(body, 'content=\"contrexx')"
-
-copadd400:
-  dsl:
-    - "contains(body, 'page/downloadlinuxclient.is.run')"
-
-cradlepoint-cr4250:
-  dsl:
-    - "contains(body, 'cplogin.model = \"cr4250\";')"
-
-d01:
-  dsl:
-    - "contains(body, '网探d01')"
-
 dahua-cameras-and-surveillance:
   dsl:
     - "contains(body, 'version=@WebVersion@')"
@@ -6724,30 +6248,6 @@ dahua-tv-wall:
 damicms:
   dsl:
     - "contains(body, 'content=\"大米cms')"
-
-dasan-router:
-  dsl:
-    - "contains(body, 'cgi-bin/menu.cgi')"
-
-das-security-firewall:
-  dsl:
-    - "contains(body, 'dbapp security')"
-
-dcn-router:
-  dsl:
-    - "contains(body, \"'www.dcnetworks.com.cn'\")"
-
-dd-wrt:
-  dsl:
-    - "contains(body, 'dd-wrt')"
-
-dell-kvm-switch:
-  dsl:
-    - "contains(body, '/dell/')"
-
-dell-poweredge-t620:
-  dsl:
-    - "contains(body, 'serverinfo\"> t620, dbe')"
 
 dell-remote-access-controller:
   dsl:
@@ -6861,114 +6361,6 @@ dlink-storage:
   dsl:
     - "contains(body, '<img src=\"/web/images/storage.jpg')"
 
-d-link-wireless-ap:
-  dsl:
-    - "contains(body, \"<body onload=\\\"load_initial_settings'no-auth', 'get_restore_default'\\\">\")"
-
-dongyoung-cameras-and-surveillance:
-  dsl:
-    - "contains(body, '<body bgcolor=\"#e6e6e6\" ')"
-
-dptech-device:
-  dsl:
-    - "contains(body, '/func/web_main/validate?check=\"+hex_md5s.tolowercase')"
-
-draytek-vigor-router:
-  dsl:
-    - "contains(body, 'login to the router web configurator')"
-
-dr-rui-cloud-office-system:
-  dsl:
-    - "contains(body, '/user/toupdatepasswordpage.di')"
-
-dvripc:
-  dsl:
-    - "contains(body, '<p><a href=\"nvocx_setup.exe\">click here to download and install the activex packet mannually.</a></p>')"
-
-dvr-remote-management-system:
-  dsl:
-    - "contains(body, 'src=\"/js/web_homecache.js\"')"
-
-eagleeye-networks:
-  dsl:
-    - "contains(body, 'title=\"eagle eye networks\">eagle eye networks</a></h1>')"
-
-eagleeyescctv:
-  dsl:
-    - "contains(body, '/nobody/logindevice.js')"
-
-efm-networks-iptime-a3004:
-  dsl:
-    - "contains(body, 'src=\"/images2/login_title.a3004d.gif')"
-
-efm-networks-iptime-g104a:
-  dsl:
-    - "contains(body, 'src =\"/images/login_back_g104a.gif\"')"
-
-efm-networks-iptime-g104be:
-  dsl:
-    - "contains(body, 'src =\"/images2/login_title.g104be.gif\"')"
-
-efm-networks-iptime-n1004q:
-  dsl:
-    - "contains(body, 'src=\"/images2/login_title.n104qi.gif\"')"
-
-efm-networks-iptime-n104v:
-  dsl:
-    - "contains(body, 'src =\"/images2/login_title.n104vlg.gif\"')"
-
-efm-networks-iptime-n1:
-  dsl:
-    - "contains(body, 'src =\"/images2/login_title.n1p.gif\"')"
-
-efm-networks-iptime-n2:
-  dsl:
-    - "contains(body, 'src=\"/images2/login_title.n2.gif\"')"
-
-efm-networks-iptime-n604v:
-  dsl:
-    - "contains(body, 'src=\"/images2/login_title.n604vlg.gif\"')"
-
-efm-networks-iptime-n704m:
-  dsl:
-    - "contains(body, 'src =\"/images2/login_title.n704mlg.gif\"')"
-
-efm-networks-iptime-q504:
-  dsl:
-    - "contains(body, 'src =\"/images/login_back_q504.gif\"')"
-
-efm-networks-iptime-v116:
-  dsl:
-    - "contains(body, 'src=\"/images2/login_title.tv116.gif\"')"
-
-elecom-thecus-nas:
-  dsl:
-    - "contains(body, 'msg:\"you don`t have any raid system.\",')"
-
-electronic-evidence-management-system:
-  dsl:
-    - "contains(body, '深圳警翼数码科技有限公司')"
-
-emc-cluster-storage:
-  dsl:
-    - "contains(body, 'id=\"dialog_title\">isilon administration</div>')"
-
-emc-recoverpoint:
-  dsl:
-    - "contains(body, 'src=\"scripts/services/wizarddatasharingservice.js\"')"
-
-emfuture-product:
-  dsl:
-    - "contains(body, '<meta content=\"中嵌科技')"
-
-employee-internet-management:
-  dsl:
-    - "contains(body, '/soft_down/mdog.exe')"
-
-engenius-wireless-router:
-  dsl:
-    - "contains(body, '/logo_engenius.png')"
-
 etungtech-routers:
   dsl:
     - "contains(body, './img/logo.jpg')"
@@ -6985,77 +6377,13 @@ fanruan-oa:
   dsl:
     - "contains(body, 'ReportServe\\?op=fs')"
 
-fiamm-camera:
-  dsl:
-    - "contains(body, 'vb.htm?authority3=')"
-
-fiberhome-fengine:
-  dsl:
-    - "contains(body, '<form name=\"form1\" action=\"/cgi/login.cgi')"
-
-fiberhome-product:
-  dsl:
-    - "contains(body, 'scos_fx@fiberhome.com ')"
-
-flir-dvtelcamera:
-  dsl:
-    - "contains(body, 'class=\"footer\">dvtel inc')"
-
-forcepoint-ngfw:
-  dsl:
-    - "contains(body, 'id=\"software_name\">ngfw security management center')"
-
-foscam-camera:
-  dsl:
-    - "contains(body, 'style=\"background:urlimages/con-logo-bg.png;')"
-
-fujitsu-kvm-switch:
-  dsl:
-    - "contains(body, 'alt=\"fujitsu')"
-
-fuji-xerox-printer:
-  dsl:
-    - "contains(body, 'phaser 4500dt</font></td>')"
-
-futuresystems-weguardia-sslplus:
-  dsl:
-    - "contains(body, 'sslplus')"
-
-gadspot-dvr:
-  dsl:
-    - "contains(body, 'name=\"configptz\"')"
-
 gadspot-nc1000-l10:
   dsl:
     - "contains(body, '<nobr>video server')"
 
-geovision-camera:
-  dsl:
-    - "contains(body, 'geovision inc. - ip camera')"
-
-getck-safegateway:
-  dsl:
-    - "contains(body, '应用安全网关')"
-
-geutebruck:
-  dsl:
-    - "contains(body, 'content=\"geutebrück g-web\"')"
-
-gigaset-voip:
-  dsl:
-    - "contains(body, 'gigaset communications')"
-
 gpon-home-gateway:
   dsl:
     - "contains(body, 'xwebpagename')"
-
-grandstream-ip-phone:
-  dsl:
-    - "contains(body, 'webapp/webapp.nocache.js')"
-
-gztxsoft-company-s-product:
-  dsl:
-    - "contains(body, 'src=\"/aaa/ipweb/scripts/showoperationresult.js\"')"
 
 h3c-firewall:
   dsl:
@@ -7081,18 +6409,6 @@ h3c-switch:
   dsl:
     - "contains(body, '<h2>web网管中')"
 
-hd-license-plate-recognition-camera:
-  dsl:
-    - "contains(body, 'action=\"sysupgrade.php')"
-
-hechen-waf:
-  dsl:
-    - "contains(body, 'class=\"inputsize2\"')"
-
-hg100r-l4:
-  dsl:
-    - "contains(body, 'copyright &copy; 2014 humax co., ltd. all rights reserved')"
-
 hillstone-traffic-management:
   dsl:
     - "contains(body, \"'hillstone networks', 'hillstone-logo.gif'\")"
@@ -7109,30 +6425,6 @@ hoperun-hr:
   dsl:
     - "contains(body, '<title>考核评测系统</title>')"
     - "contains(body, 'src=./static/js/manifest')"
-
-hp-bladesystem:
-  dsl:
-    - "contains(body, '//hpoa:enclosurestatus/')"
-
-hpe-adsl-wireless-firewall-router:
-  dsl:
-    - "contains(body, '<meta http-equiv=\"sysobjectid\" content=\"1.3.6.1.4.1.43.1.19.14\">')"
-
-hua-ar-agile-gateway:
-  dsl:
-    - "contains(body, 'ispbxmode_callback')"
-
-huashunxinan-foeye:
-  dsl:
-    - "contains(body, '/assets/foeye/logo')"
-
-huawei-cloud-bastion-host:
-  dsl:
-    - "contains(body, 'type=application/x-xtx-axhost')"
-
-huawei-enterprise-proxy-server:
-  dsl:
-    - "contains(body, '<form name=\"frmlogon\" id=\"frmlogon\" method=\"post\"  action=\"/operatorlogin\" onsubmit=\"return check\">')"
 
 huawei-hg8121h:
   dsl:
@@ -7182,46 +6474,6 @@ huawei-wireless-lan:
   dsl:
     - "contains(body, 'access controller')"
 
-huaxunchina-wlan:
-  dsl:
-    - "contains(body, '华讯方舟 - 集中无线控制器')"
-
-humax-quantum-t3av2:
-  dsl:
-    - "contains(body, 'dw\"t3atv2\" : dw\"t3av2\"')"
-
-iactive-cloud-video-platform:
-  dsl:
-    - "contains(body, 'meetingshow!show.action')"
-
-ibm-bladecenter:
-  dsl:
-    - "contains(body, 'alt=\"ibm bladecenter')"
-
-ibm-storwize:
-  dsl:
-    - "contains(body, 'ibm 和 storwize 是 ibm corporation 在美国和/或其他国家或地区的注册商标')"
-
-ibm-system-x:
-  dsl:
-    - "contains(body, 'american megatrends inc.</font>')"
-
-ideacms:
-  dsl:
-    - "contains(body, 'ejnav{ideacms:cursort')"
-
-ids-webcam:
-  dsl:
-    - "contains(body, 'ids_web_change_pwd')"
-
-ifw8-router:
-  dsl:
-    - "contains(body, 'www.ifw8.cn')"
-
-infogo-asm6000:
-  dsl:
-    - "contains(body, '中石化统一认证项目的跳转地址')"
-
 inspur-as5600:
   dsl:
     - "contains(body, 'class=\"logininputlabel\"')"
@@ -7230,85 +6482,9 @@ inspur-server:
   dsl:
     - "contains(body, '<frame src=\"./page/blank.html\" name=\"mainframe\" id=\"mainframe\" scrolling=\"no\" noresize=\"false\"></frame>')"
 
-intelbras-surveillance:
-  dsl:
-    - "contains(body, 'function startplayall')"
-
-intelligentwarehousemanagementsystem:
-  dsl:
-    - "contains(body, \"event.srcelement.type!='reset\")"
-
-intellinet-ip-camera:
-  dsl:
-    - "contains(body, 'http://www.intellinet-network.com/driver/netcam.exe')"
-
-ionic:
-  dsl:
-    - "contains(body, 'ionic.min.js')"
-
-ip-camera:
-  dsl:
-    - "contains(body, 'clientbin/vimicro.silverlight.video.xap')"
-
-ip-com-employee-internet-management:
-  dsl:
-    - "contains(body, 'parent.location.href=\"/login\"')"
-
-iptime-ew302n:
-  dsl:
-    - "contains(body, 'src=\"/images2/login_title.ew302nr.gif\"')"
-
-iptime-g204:
-  dsl:
-    - "contains(body, 'src=\"/images2/login_title.g204.gif\"')"
-
-iptime-g504:
-  dsl:
-    - "contains(body, 'src =\"/images2/login_title.g504.gif\"')"
-
-iptime-n704:
-  dsl:
-    - "contains(body, 'src =\"/images/login_back_n704.gif\"')"
-
-iptime-q204:
-  dsl:
-    - "contains(body, 'src =\"/images/login_back_tq204.gif\"')"
-
-i-report:
-  dsl:
-    - "contains(body, 'css/ireport.css')"
-
-is-vision-portrait-comparison-system:
-  dsl:
-    - "contains(body, '人像比对系统')"
-
-jianzhengzhe-bodyworncamera:
-  dsl:
-    - "contains(body, 'href=\"/html/download.html\">工具下载</a></li>')"
-
 jinher-oa:
   dsl:
     - "contains(body, 'closewindownoask')"
-
-juniper-srx550m:
-  dsl:
-    - "contains(body, 'class=\"jweb-title uppercase\"> - srx550m')"
-
-justcall:
-  dsl:
-    - "contains(body, 'userweb/index.php?module=user&action=login')"
-
-kerio-winrout-firewall:
-  dsl:
-    - "contains(body, '/gfx/kerio_logo.gif')"
-
-kesioncms:
-  dsl:
-    - "contains(body, 'publish by kesioncms')"
-
-kingcms:
-  dsl:
-    - "contains(body, 'powered by kingcms')"
 
 kingdee-k3-cloud:
   dsl:
@@ -7317,34 +6493,6 @@ kingdee-k3-cloud:
 kingdee-oa:
   dsl:
     - "contains(body, 'logo-kingdee.png')"
-
-kingsoft-v8-terminal-security-system:
-  dsl:
-    - "contains(body, 'href=\"mobiletools/android/net.ejinshan.avclient.apk')"
-
-konica-minolta-printer:
-  dsl:
-    - "contains(body, '<langno>en</langno> </mfp>')"
-
-kppw:
-  dsl:
-    - "contains(body, \"<img id='imgflag' src=\\\"tpl/default/img/\")"
-
-kubesphere:
-  dsl:
-    - "contains(body, '\"title\":\"KubeSphere\",\"description\"')"
-
-kyocera-printer:
-  dsl:
-    - "contains(body, 'var modelname=')"
-
-lancom-vpn-1711:
-  dsl:
-    - "contains(body, 'src=\"/images/prodimg.jpeg\" alt=\"test lancom 1711 vpn')"
-
-landray-eis-smart-collaboration-platform:
-  dsl:
-    - "contains(body, 'v11_qrcodebar clr')"
 
 leadsec-waf:
   dsl:
@@ -7378,46 +6526,6 @@ linksys-ip-cameras:
   dsl:
     - "contains(body, 'align=\"center\">compact wireless-g')"
 
-maipu-mp1800x-50:
-  dsl:
-    - "contains(body, '/form/formuserlogin')"
-
-maspro-webcam:
-  dsl:
-    - "contains(body, 'href=\"/mobile/index.html\"')"
-
-materialize-css:
-  dsl:
-    - "contains(body, 'materialize/css')"
-
-mcu-video-conferencing:
-  dsl:
-    - "contains(body, 'mcu default page')"
-
-meraki-network-device:
-  dsl:
-    - "contains(body, 'src=\"images/cisco-meraki.png\"')"
-
-mimosa-product:
-  dsl:
-    - "contains(body, 'mimosa.isconnected=')"
-
-mi-router:
-  dsl:
-    - "contains(body, 'mirouter-router-2</a>')"
-
-mobile-law-enforcement-terminal:
-  dsl:
-    - "contains(body, 'huadean. all rights ')"
-
-mobinat-wireless-router:
-  dsl:
-    - "contains(body, 'http://mobinnet.ir/coverage')"
-
-moxa-awk-3121:
-  dsl:
-    - "contains(body, 'awk-3121')"
-
 ncast-product:
   dsl:
     - "contains(body, 'content=\"盈可视ncast')"
@@ -7437,38 +6545,6 @@ netcore-nac:
 netdvrv3:
   dsl:
     - "contains(body, \"document.write\\\"<a href='../netdvrv3.exe'>web client plugin</a>.\\\"\")"
-
-netentsec-internet-control-gateway:
-  dsl:
-    - "contains(body, 'function getslotserialnumberslotid')"
-
-netentsec-ns-asg-security-gateway:
-  dsl:
-    - "contains(body, 'id=\"slotserialnumber\"')"
-
-netgear-dgnd3700:
-  dsl:
-    - "contains(body, 'content=\"dgnd3700')"
-
-netgear-r6400:
-  dsl:
-    - "contains(body, 'content=\"r6400\"')"
-
-netgear-r7000:
-  dsl:
-    - "contains(body, 'content=\"r7000\"')"
-
-netgear-xr500:
-  dsl:
-    - "contains(body, 'var host_name = \"xr500\"')"
-
-netis-router:
-  dsl:
-    - "contains(body, './script/logic.js')"
-
-netmodule-nb1600:
-  dsl:
-    - "contains(body, 'nb1600 netmodule router<br>')"
 
 netmoon-s-internet-product:
   dsl:
@@ -7502,14 +6578,6 @@ nsfocus-wvss:
   dsl:
     - "contains(body, 'nsfocus wvss')"
 
-nsoft-ewebs:
-  dsl:
-    - "contains(body, \"<a href='../client/ewebsclientsetup.exe'></a> </td>\")"
-
-okaynav-js:
-  dsl:
-    - "contains(body, 'jquery.okaynav.js')"
-
 opencms:
   dsl:
     - "contains(body, 'powered by opencms')"
@@ -7522,26 +6590,6 @@ ourphp:
   dsl:
     - "contains(body, '/templates/default/images/erweima.png')"
 
-panasonic-network-camera:
-  dsl:
-    - "contains(body, 'src=\"barfoot.html\"')"
-
-pelco-sarix:
-  dsl:
-    - "contains(body, 'function pegfootertobottom')"
-
-perfectone-voip-phone:
-  dsl:
-    - "contains(body, 'onload=\"javascript:document.Log.Inform.user.focus')"
-
-phpstudy:
-  dsl:
-    - "contains(body, '1：新建站点、数据库、FTP可在phpstudy面板操作，数据库可在环境中下载数据库管理软件等；')"
-
-piaware-info:
-  dsl:
-    - "contains(body, \"<%= t'this is a piaware ads-b feeder' %>.\")"
-
 pintsize-css:
   dsl:
     - "contains(body, 'pintsize.css')"
@@ -7553,26 +6601,6 @@ polycom-video-conferencing:
 qnap-nas:
   dsl:
     - "contains(body, '/indexnas.cgi?counter=')"
-
-reach-hd-recording-system:
-  dsl:
-    - "contains(body, '锐取')"
-
-richcache-vpn:
-  dsl:
-    - "contains(body, 'class=\"no-js\">请先启用javascript')"
-
-richmail:
-  dsl:
-    - "contains(body, 'app_download\":\"\",\"richmail官网')"
-
-rise_broadband-wrt500:
-  dsl:
-    - "contains(body, '/style/g800_readynet_jab.png')"
-
-ruckus-wireless:
-  dsl:
-    - "contains(body, 'mon.  tell me your username')"
 
 ruijie-firewall:
   dsl:
@@ -7594,14 +6622,6 @@ ruijie-switch:
   dsl:
     - "contains(body, 'id=\"a_lang_switch\"')"
 
-samsung-nvr:
-  dsl:
-    - "contains(body, 'wisenet nvr')"
-
-samsung-printer:
-  dsl:
-    - "contains(body, 'location = \"/sws/index.html\";')"
-
 sangfor-application-delivery:
   dsl:
     - "contains(body, '/static/es5_shim/es5-sham.js')"
@@ -7613,14 +6633,6 @@ sangfor-m5500:
 sangfor-p5100:
   dsl:
     - "contains(body, 'p5100')"
-
-sapido-router:
-  dsl:
-    - "contains(body, '/b28n.js')"
-
-scada-plc:
-  dsl:
-    - "contains(body, 'ethernet processor')"
 
 schneider-quantum-140noe77101:
   dsl:
@@ -7642,17 +6654,9 @@ semcms:
   dsl:
     - "contains(body, 'powered by <a href=\"http://www.sem-cms.com\"')"
 
-shoretel-converged-conferencing:
-  dsl:
-    - "contains(body, '<div style=\"visibility:hidden;display:none\" id=\"text_opening_product\">opening *brand_product_name*</div>')"
-
-shterm-fortres-machine:
-  dsl:
-    - "contains(body, 'var driver = dllregistered\"xectrl13.xfpauthenexportx\";')"
-
 sidao-oa:
   dsl:
-    - "contains(body, '思道OA v.* Powered by .*')"
+    - "contains(body, '思道OA')"
 
 siemens-simatic-hmi:
   dsl:
