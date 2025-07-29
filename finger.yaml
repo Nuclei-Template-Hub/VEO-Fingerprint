@@ -5670,10 +5670,6 @@ h3c-er3200:
   dsl:
     - "contains(body, 'ER3200系统管理')"
 
-atmail-webmail:
-  dsl:
-    - "contains(body, 'Powered by Atmail')"
-
 juniper_vpn:
   dsl:
     - "contains(body, '/images/logo_juniper_reversed.gif')"
@@ -5682,22 +5678,10 @@ exchange:
   dsl:
     - "contains(body, 'Exchange Admin Center')"
 
-swagger_ui:
-  dsl:
-    - "contains(body, 'swagger-ui.min.js')"
-
 druid:
   dsl:
     - "contains(body, 'Druid Stat Index')"
     - "contains(body, 'druid.login.unamecr')"
-
-ibm-lotus-domino:
-  dsl:
-    - "icon('/favicon.ico', '639b61409215d770a99667b446c80ea1')"
-
-ras:
-  dsl:
-    - "contains(body, 'i18ninit.min.js')"
 
 activemq:
   dsl:
@@ -5725,33 +5709,13 @@ nexus:
   dsl:
     - "contains(body, 'Nexus Repository Manager')"
 
-eas:
-  dsl:
-    - "contains(body, 'easSessionId')"
-
 阿里云cdn:
   dsl:
     - "contains(body, 'cdn.aliyuncs.com')"
 
-cisco_epc3925:
-  dsl:
-    - "contains(body, 'Docsis_system')"
-
-cisco-asr:
-  dsl:
-    - "contains(body, 'CISCO ASR')"
-
-spark_master:
-  dsl:
-    - "contains(body, 'Spark Master at')"
-
-_huawei_srg2220:
+huawei_srg2220:
   dsl:
     - "contains(body, 'HUAWEI SRG2220')"
-
-netopen:
-  dsl:
-    - "contains(body, '/netopen/theme/css/inFrame.css')"
 
 citrix-web-pn-server:
   dsl:
@@ -5788,10 +5752,6 @@ h3c-er3260g2:
 h3c-icg1000:
   dsl:
     - "contains(body, 'ICG1000系统管理')"
-
-cisco-cx20:
-  dsl:
-    - "contains(body, 'CISCO-CX20')"
 
 h3c-er5200:
   dsl:
@@ -5837,7 +5797,7 @@ h3c-er6300:
   dsl:
     - "contains(body, 'ER6300系统管理')"
 
-_huawei_asg2100:
+huawei_asg2100:
   dsl:
     - "contains(body, 'HUAWEI ASG2100')"
 
@@ -5857,37 +5817,9 @@ jira:
   dsl:
     - "contains(body, 'jira.webresources')"
 
-_huawei_srg1220:
-  dsl:
-    - "contains(body, 'HUAWEI SRG1220')"
-
-h3c-er2100n:
-  dsl:
-    - "contains(body, 'ER2100n系统管理')"
-
-h3c-er8300g2:
-  dsl:
-    - "contains(body, 'ER8300G2系统管理')"
-
-weaver-ebridge:
-  dsl:
-    - "contains(body, 'e-Bridge,http://wx.weaver')"
-
-jquery-1-7-2:
-  dsl:
-    - "contains(body, 'webui/js/jquerylib/jquery-1.7.2.min.js')"
-
 hadoop-applications:
   dsl:
     - "contains(body, '/cluster/app/application')"
-
-clusterenginev4-0:
-  dsl:
-    - "contains(body, '0;url=module/login/login.html')"
-
-f12:
-  dsl:
-    - "contains(body, 'get_dkey_passwd')"
 
 smartbi-insight:
   dsl:
@@ -5897,33 +5829,9 @@ topapp-lb:
   dsl:
     - "contains(body, 'TopApp-LB 负载均衡系统')"
 
-atlassian-confluence:
-  dsl:
-    - "icon('/favicon.ico', 'b91d19259cf480661ef93b67beb45234')"
-
 hfs:
   dsl:
     - "contains(body, 'href=\"http://www.rejetto.com/hfs/')"
-
-pulse-connect-secure:
-  dsl:
-    - "contains(body, '/dana-na/imgs/space.gif')"
-
-h5ai:
-  dsl:
-    - "contains(body, 'powered by h5ai')"
-
-urp:
-  dsl:
-    - "contains(body, '北京清元优软科技有限公司')"
-
-bdwebguard:
-  dsl:
-    - "contains(body, 'BACKGROUND: urlimages/loginbg.jpg #e5f1fc')"
-
-iufo:
-  dsl:
-    - "contains(body, 'iufo/web/css/menu.css')"
 
 teleport:
   dsl:
@@ -5969,129 +5877,9 @@ alibaba-druid:
   dsl:
     - "contains(body, 'src=\"/static/img/skyeye-logo-big.png\">')"
 
-3cx-phone-system-management-console:
-  dsl:
-    - "contains(body, 'src=\"/public/app.807e10d98cfac19e.js\"')"
-
 8cms:
   dsl:
     - "contains(body, '/tpl/templets')"
-
-acme-plc-wireless-router:
-  dsl:
-    - "contains(body, 'lang_firmwarelogin')"
-
-acti-cameras-and-surveillance:
-  dsl:
-    - "contains(body, 'url=/cgi-bin/videoconfiguration.cgi')"
-
-acti-nvr:
-  dsl:
-    - "contains(body, \"var szproducttype = 'nvr'\")"
-
-acunetix:
-  dsl:
-    - "contains(body, '<html ng-app=\"WVS\"')"
-
-adn:
-  dsl:
-    - "contains(body, 'src=\"http://res.wx.qq.com/open/js/jweixin')"
-
-adslr-router:
-  dsl:
-    - "contains(body, 'src=\"chinesehl.js\"')"
-
-agora-cgi:
-  dsl:
-    - "contains(body, '/store/agora.cgi')"
-
-alcatel_lucent-enterprise-gateway:
-  dsl:
-    - "contains(body, 'alcatel-lucent')"
-
-amcrest-camera:
-  dsl:
-    - "contains(body, 'amcrest technologies')"
-
-apd-cameras-and-surveillance:
-  dsl:
-    - "contains(body, 'lg_body_iptpsw')"
-
-aruba-device:
-  dsl:
-    - "contains(body, 'aruba networks')"
-
-asus-rt-ac3200:
-  dsl:
-    - "contains(body, \"var product_name='rt-ac3200'\")"
-
-asus-rt-ac66r:
-  dsl:
-    - "contains(body, 'class=\"prod_madelname\" style=\"margin-left:78px;\">rt-ac66r</div>')"
-
-asus-rt-ac66u_b1:
-  dsl:
-    - "contains(body, 'rt-ac66u_b1')"
-
-asus-rt-ac66u:
-  dsl:
-    - "contains(body, 'prod_madelname\">rt-ac66u')"
-
-asus-rt-ac68u:
-  dsl:
-    - "contains(body, 'asus rt-ac68u')"
-
-asus-rt-ac87r:
-  dsl:
-    - "contains(body, \"var product_name='rt-ac87r'\")"
-
-asus-rt-ax88u:
-  dsl:
-    - "contains(body, '\"model_name\":\"rt-ax88u\"')"
-
-asus-rt-n12hp_b1:
-  dsl:
-    - "contains(body, 'class=\"prod_madelname\" style=\"margin-left:78px;\">rt-n12hp_b1')"
-
-asus-rt-n56u:
-  dsl:
-    - "contains(body, \"var product_name='rt-n56u'\")"
-
-asus-rt-n66r:
-  dsl:
-    - "contains(body, 'class=\"prod_madelname\" style=\"margin-left:78px;\">rt-n66r')"
-
-asus-rt-n66u:
-  dsl:
-    - "contains(body, 'class=\"prod_madelname\" style=\"margin-left:78px;\">rt-n66u')"
-
-asus-tuf-ax3000:
-  dsl:
-    - "contains(body, 'class=\"prod_madelname\">tuf-ax3000</div>')"
-
-aten-company-s-product:
-  dsl:
-    - "contains(body, 'document.writelnlang.lang_login_prompt')"
-
-avaya-secure-router:
-  dsl:
-    - "contains(body, '<span id=\"guiname\">avaya secure router')"
-
-avcon6:
-  dsl:
-    - "contains(body, 'language_dispose.action')"
-
-avermedia-webcamx:
-  dsl:
-    - "contains(body, 'depending on the internet bandwidth, it might take a few minutes to download the software.')"
-
-aviosys-ip-camera:
-  dsl:
-    - "contains(body, 'view log')"
-
-avocent-kvm-switch:
-  dsl:
-    - "contains(body, 'alt=\"avocent')"
 
 awstats:
   dsl:
@@ -6109,14 +5897,6 @@ axis-printserver:
   dsl:
     - "contains(body, '/cgi-bin/prodhelp?prod=')"
 
-b2bbuilder:
-  dsl:
-    - "contains(body, 'translatebuttonid = \"b2bbuilder')"
-
-backbone:
-  dsl:
-    - "contains(body, 'backbone.js')"
-
 baidu-jiasule:
   dsl:
     - "contains(body, 'static.jiasule.com/static/js/http_error.js')"
@@ -6129,105 +5909,9 @@ barracuda-spam-firewall:
   dsl:
     - "contains(body, 'http://www.barracudanetworks.com?a=bsf_product')"
 
-base-security:
-  dsl:
-    - "contains(body, 'mailto:base@secureideas.net')"
-
-bea-weblogic-server:
-  dsl:
-    - "contains(body, '<h1>welcome to weblogic application')"
-
-bees-cms:
-  dsl:
-    - "contains(body, 'mx_form/mx_form.php')"
-
-beijinghuayu-safegateway:
-  dsl:
-    - "contains(body, 'var opzoon_ver')"
-
-belkin-g-wireless-router:
-  dsl:
-    - "contains(body, 'def_pg=\"status.stm\"')"
-
-belkin-n150:
-  dsl:
-    - "contains(body, 'src=\"status.stm\"')"
-
-bihaiyunhe-router:
-  dsl:
-    - "contains(body, '<h4>欢迎登录碧海云盒</h4>')"
-
-bitnami:
-  dsl:
-    - "contains(body, '<p>Thanks for using Bitnami!</p>')"
-
-bocom-vstor:
-  dsl:
-    - "contains(body, '.bocom_titile_font{')"
-
-bomgar:
-  dsl:
-    - "contains(body, '<a href=\"http://www.bomgar.com/products\" class=\"inverse')"
-
 iis:
   dsl:
     - "contains(body, 'iisstart.png')"
-
-bosch-access-control:
-  dsl:
-    - "contains(body, 'color=\"#1b528c\" >robert bosch gmbh reserves all rights')"
-
-bosch-divar-ip:
-  dsl:
-    - "contains(body, \"the requested url '/' was not found on the divar\")"
-
-bosch-sps:
-  dsl:
-    - "contains(body, 'bosch security systems.  all rights reserved.')"
-
-brocade-switch:
-  dsl:
-    - "contains(body, 'com.brocade.web.secsan.loginapplet')"
-
-brother-printer:
-  dsl:
-    - "contains(body, '<img src=\"/common/image/hl4040cn')"
-
-buffalo-terastation:
-  dsl:
-    - "contains(body, 'value=\"terastation handbuch lesen')"
-
-bugscan:
-  dsl:
-    - "contains(body, 'powered by bugscan')"
-
-bugtracker-net:
-  dsl:
-    - "contains(body, '<div class=logo>bugtracker.net')"
-
-byzoro-nfw:
-  dsl:
-    - "contains(body, 'class=\"login_main_text\">下一代防火墙</div>')"
-
-carrier-ccnweb:
-  dsl:
-    - "contains(body, '<applet code=\"jlogin.class\" archive=\"jlogin.jar')"
-
-centrecom-ar-routor:
-  dsl:
-    - "contains(body, 'centrecom&reg; arx640s</span>')"
-
-certificate-management-server:
-  dsl:
-    - "contains(body, '证书管理服务器')"
-
-cethik-reader-configuration-system:
-  dsl:
-    - "contains(body, 'rfid/content/superuser')"
-
-cgi-irc:
-  dsl:
-    - "contains(body, '<small id=\"ietest\"><a href=\"http://cgiirc.org/')"
 
 chart-js:
   dsl:
