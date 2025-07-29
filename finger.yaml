@@ -5283,20 +5283,9 @@ xtoa-oa:
     - "contains(body, 'src=\"systemfiles/js/iawebclientactivexcheck.js\"')"
 
 xxl-job:
+  path: "/xxl-job-admin/toLogin"
   dsl:
     - "contains(body, '分布式任务调度平台XXL-JOB')"
-
-xycms:
-  dsl:
-    - "contains(body, 'advfile/ad12.js')"
-
-xyhcms:
-  dsl:
-    - "contains(body, 'power by xyhcms')"
-
-yabb:
-  dsl:
-    - "contains(body, '/yabb.js')"
 
 yadongsoft-fs3:
   dsl:
@@ -5310,49 +5299,9 @@ yearning:
   dsl:
     - "contains(body, 'id=subnet')"
 
-yelala:
-  dsl:
-    - "contains(body, '<form action=\"/index.php/home/login/login.html\" method=\"post\" id=\"login\" class=\"form\" data-bind=\"submit: submitform\">')"
-
-yfidea-oa:
-  dsl:
-    - "contains(body, 'background=\"oa/images/index/oalogin.jpg\"')"
-
-yichao-crmreporting:
-  dsl:
-    - "contains(body, 'href=\"/css/vendors~index.acfeb.css\"')"
-
-yichao-system:
-  dsl:
-    - "contains(body, 'src=\"amy/webos/jpmanager.js\"')"
-
 yii-framework:
   dsl:
     - "contains(body, 'yii_csrf_token')"
-
-yioks-campus-football-management-platform:
-  dsl:
-    - "contains(body, \"<script>document.location='/index.mpl?a=login'</script>\")"
-
-yiqi-cms:
-  dsl:
-    - "contains(body, 'content=\"yiqicms')"
-
-yirui-iras:
-  dsl:
-    - "contains(body, 'fe0174bb-f093-42af-ab20-7ec621d10488')"
-
-yiyu-opms:
-  dsl:
-    - "contains(body, 'opms管理系统,织蝶-企业应用系统为您的企业保驾护航')"
-
-yizhitong-e7:
-  dsl:
-    - "contains(body, 'name=\"hidden_isbiaozhun\"')"
-
-ymail-optical-content-reading:
-  dsl:
-    - "contains(body, '/ymail/default/js/menu.js')"
 
 ymhome-oa:
   dsl:
@@ -5429,7 +5378,7 @@ zzzcms:
   dsl:
     - "contains(body, '.banner .in_business ul li dd')"
 
-4a:
+中科网威4a运维堡垒机系统:
   dsl:
     - "contains(body, \"zk.appname='中科网威4a运维堡垒机系统'\")"
 
@@ -5500,15 +5449,11 @@ erp:
   dsl:
     - "icon('/favicon.ico', 'c68b15c45cf80115a943772f7d0028a6')"
 
-dcs:
+yozodcs:
   dsl:
     - "contains(body, '<title>永中文档在线预览DCS</title>')"
     - "contains(body, 'www.yozodcs.com')"
 
-lpmi:
-  dsl:
-    - "contains(body, 'Management System')"
-    - "contains(body, 'img/inspur_logo.png')"
 
 waf:
   dsl:
@@ -5522,11 +5467,8 @@ ngaf:
     - "contains(body, 'NGAF')"
     - "contains(body, 'login')"
 
-mis:
-  dsl:
-    - "icon('/favicon.ico', '837f7af9a5509a71122fe77505e4451c')"
 
-v8:
+金山企业安全终端防护优化系统:
   dsl:
     - "contains(body, 'class=\"anouncetext\">为了更好的保障企业内网的安全公司决定从即日起全面部署金山企业安全终端防护优化系统')"
     - "contains(body, '在线安装-v8+终端安全系统web控制台')"
@@ -5536,24 +5478,10 @@ v8:
     - "contains(body, 'hongfan. all rights reserved')"
     - "contains(body, 'xspreadsheet.css')"
 
-ns-asg:
-  dsl:
-    - "contains(body, 'client/thickbox.css')"
-    - "contains(body, '400-678-3600')"
-
-it:
+联软it安全运维管理系统:
   dsl:
     - "contains(body, 'action=\"/manager/logincontroller.htm?act=login')"
     - "contains(body, '联软it安全运维管理系统')"
-
-eis:
-  dsl:
-    - "contains(body, '/scripts/jquery.landray.common.js')"
-
-timeon:
-  dsl:
-    - "contains(body, '<title>TimeOn')"
-    - "contains(body, 'iepngfix/iepngfix_tilebg.js')"
 
 rg-ew1200g:
   dsl:
@@ -5588,32 +5516,21 @@ h3c-router:
   dsl:
     - "contains(body, '/wnm/ssl/web/frame/login.html')"
 
-cisco-sslvpn:
-  dsl:
-    - "contains(body, '/+CSCOE+/logon.html')"
-
 bt-cn:
   dsl:
     - "contains(body, '宝塔Linux面板')"
-
-nc:
-  dsl:
-    - "contains(body, '/nc/servlet/nc.ui.iufo.login.Index')"
 
 用友nc:
   tags: oa,yonyou,u8cloud
   dsl:
     - "contains(body, 'uclient.yonyou.com')"
     - "contains(body, 'UClient')"
+    - "contains(body, '/nc/servlet/nc.ui.iufo.login.Index')"
 
 ipmi:
   dsl:
     - "contains(body, 'img/inspur_logo.png')"
     - "contains(body, 'Management System')"
-
-regentapi_v2-0:
-  dsl:
-    - "contains(body, 'RegentApi_v2.0')"
 
 tomcat:
   dsl:
@@ -5626,18 +5543,6 @@ secgate-3600:
     - "contains(body, '网神SecGate')"
     - "contains(body, '3600防火墙')"
     - "contains(body, 'css/lsec/login.css')"
-
-manageengine-admanager-plus:
-  dsl:
-    - "contains(body, 'ADManager')"
-    - "contains(body, 'Hashtable.js')"
-    - "contains(body, 'ManageEngine')"
-
-apache2-debian:
-  dsl:
-    - "contains(body, 'Apache2 Debian Default')"
-    - "contains(body, 'It works!')"
-    - "contains(body, 'Debian Logo')"
 
 ruoyi:
   condition: and
