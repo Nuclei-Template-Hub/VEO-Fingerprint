@@ -608,10 +608,6 @@ h2-database:
   dsl:
     - "contains(body, 'welcome to h2')"
 
-h3c-cas:
-  dsl:
-    - "contains(body, \"<iframe src=\\\"javascript:''\\\" id=\\\"__gwt_historyframe\\\" tabindex='-1' style=\\\"position:absolute;width:0;height:0;border:0\\\"></iframe>\")"
-
 h3c-cloud:
   dsl:
     - "contains(body, 'vstor')"
@@ -656,17 +652,10 @@ h3c:
 h3cer3200:
   dsl:
     - "contains(body, 'ER3200')"
-    - "contains(body, 'h3c.com')"
-    - "contains(body, 'home.asp')"
 
 h5s-video-platform:
   dsl:
     - "icon('/favicon.ico', '71d350f81224c181b2fc5851fc61b0ba')"
-
-h_ui:
-  dsl:
-    - "contains(body, '/css/h-ui.login.css')"
-    - "contains(body, '/h-ui.admin/')"
 
 hadoop-administration:
   dsl:
@@ -749,14 +738,6 @@ infowarelab-system-management-center:
   dsl:
     - "contains(body, '<div class=\"main_supporterbar\">')"
 
-innotube-manager:
-  dsl:
-    - "contains(body, 'images/intro/lin_bottom_nocr.gif')"
-
-inoerp:
-  dsl:
-    - "contains(body, 'id=\"ino-body\"')"
-
 inspinia:
   dsl:
     - "contains(body, 'inspinia')"
@@ -769,30 +750,6 @@ inspur-incloud-sphere:
   dsl:
     - "contains(body, 'class=\"easyui-layout')"
 
-installationqualitymanagementsystem:
-  dsl:
-    - "contains(body, 'images/ewuser_title.jpg')"
-
-integrating-century-epbp-management-platform:
-  dsl:
-    - "contains(body, 'match = rmsie.exec(window.navigator.useragent')"
-
-intelligence-parking-integrated-management-platform:
-  dsl:
-    - "contains(body, '厦门立智通讯科技有限公司 版权所有')"
-
-intelligent-cloud:
-  dsl:
-    - "contains(body, 'handlexpapplycontact')"
-
-interactivevirtualshipdisplaysystem:
-  dsl:
-    - "contains(body, '交互式虚拟船舶展示系统</a>')"
-
-interred:
-  dsl:
-    - "contains(body, 'created with interred')"
-
 invision-ipboard:
   dsl:
     - "contains(body, 'ipb.vars')"
@@ -801,7 +758,7 @@ invision-powerboard:
   dsl:
     - "contains(body, 'powered by <a href=\"http://www.invisionboard.com')"
 
-ip_com:
+ip-com:
   dsl:
     - "contains(body, '深圳市和为顺网络技术有限公司\"z?pkq')"
     - "contains(body, 'technology, inc.')"
@@ -842,14 +799,6 @@ ispconfig:
   dsl:
     - "contains(body, 'powered by <a href=\"http://www.ispconfig.org')"
 
-isunor-order-management-system:
-  dsl:
-    - "contains(body, \"var c_name = 'jsessionid';\")"
-
-itenable:
-  dsl:
-    - "contains(body, '/images/enableq.ico')"
-
 iwebshop:
   dsl:
     - "contains(body, 'class=\"pro_title\">iwebshop支付测试')"
@@ -861,15 +810,6 @@ iwebsns:
 jakarta-project:
   dsl:
     - "contains(body, '<a href=\"http://jakarta.apache.org/\">')"
-
-jamf-panel:
-  dsl:
-    - "contains(body, 'Jamf Pro Login')"
-    - "contains(body, 'Jamf Cloud Node')"
-
-jasig-cas:
-  dsl:
-    - "contains(body, 'powered by <a href=\"http://www.jasig.org/cas')"
 
 javashop:
   dsl:
@@ -943,11 +883,7 @@ jnsh-system:
   dsl:
     - "contains(body, 'src=\"../../doc/config/shxmjgptapp.png\"')"
 
-join-cheer-general-financial-system:
-  dsl:
-    - "contains(body, '<meta http-equiv=\"refresh\" content=\"0\";url=\"../netrep\">')"
-
-join_cheer-report:
+joincheer-report:
   dsl:
     - "contains(body, '../netrep')"
     - "contains(body, 'jqci')"
@@ -1021,7 +957,7 @@ kindeditor:
   dsl:
     - "contains(body, 'kindeditor-min.js')"
 
-kingdee:
+kingdee-oa:
   dsl:
     - "contains(body, 'img src=\"images/logo-kingdee.gif\"')"
 
@@ -1062,18 +998,10 @@ netzone-webcache:
   dsl:
     - "contains(body, '广州高度软件有限公司版权所有')"
 
-neusoft-neteye-bitsaver:
-  dsl:
-    - "contains(body, 'href=\"/ntars/css/')"
-
 neusoft-neteye:
   dsl:
     - "contains(body, 'name=\"login_form\" action=\"/fwm4/fwm.cgi/usrlgin\" ')"
     - "contains(body, 'neteye防火墙系统')"
-
-neusoft-senginx:
-  dsl:
-    - "contains(body, 'senginx-robot-mitigation')"
 
 neusoft-uniportal:
   dsl:
@@ -1130,12 +1058,7 @@ richinfo-richmail:
     - "contains(body, 'content=\"richmail')"
     - "contains(body, 'richmail')"
 
-riicy:
-  dsl:
-    - "contains(body, '/user/toupdatepasswordpage.di')"
-    - "contains(body, '/studentsign/tologin.di')"
-
-rising:
+瑞星网络安全预警系统:
   dsl:
     - "contains(body, '瑞星网络安全预警系统')"
 
@@ -1184,7 +1107,7 @@ ruijie:
   dsl:
     - "contains(body, '4008 111 000')"
 
-sangfor-behavior-management-or-identity-authentication-system:
+深信服上网行为管理:
   dsl:
     - "contains(body, 'class=\"info-inner\"')"
 
@@ -1431,7 +1354,7 @@ sbu:
   dsl:
     - "contains(body, '天融信数据安全系统sbu')"
 
-topapp_lb:
+topapp-lb:
   dsl:
     - "contains(body, '<title>天融信 TopAPP</title>')"
 
@@ -1498,11 +1421,6 @@ ngaf:
 rg-ew1200g:
   dsl:
     - "contains_all(body, '/static/img/title.ico','锐捷','/js/app')"
-
-otter-manager:
-  dsl:
-    - "contains(body, 'Otter Manager')"
-    - "contains(body, 'channelList')"
 
 seeyon:
   dsl:
@@ -1581,7 +1499,7 @@ h3c-er3200:
   dsl:
     - "contains(body, 'ER3200系统管理')"
 
-juniper_vpn:
+juniper-vpn:
   dsl:
     - "contains(body, '/images/logo_juniper_reversed.gif')"
 
@@ -1624,7 +1542,7 @@ nexus:
   dsl:
     - "contains(body, 'cdn.aliyuncs.com')"
 
-huawei_srg2220:
+huawei-srg2220:
   dsl:
     - "contains(body, 'HUAWEI SRG2220')"
 
@@ -1644,7 +1562,7 @@ tp-link-wireless-wdr3600:
   dsl:
     - "contains(body, 'TP-LINK Wireless WDR3600')"
 
-_huawei_asg2050:
+huawei-asg2050:
   dsl:
     - "contains(body, 'HUAWEI ASG2050')"
 
@@ -1668,7 +1586,7 @@ h3c-er5200:
   dsl:
     - "contains(body, 'ER5200系统管理')"
 
-citrix_netscaler:
+citrix-netscaler:
   dsl:
     - "contains(body, 'ns_af')"
 
@@ -1676,11 +1594,11 @@ h3c-er3260:
   dsl:
     - "contains(body, 'ER3260系统管理')"
 
-_huawei_srg3250:
+huawei-srg3250:
   dsl:
     - "contains(body, 'HUAWEI SRG3250')"
 
-spark_worker:
+spark-worker:
   dsl:
     - "contains(body, 'Spark Worker at')"
 
@@ -1712,7 +1630,7 @@ h3c-er6300:
   dsl:
     - "contains(body, 'ER6300系统管理')"
 
-huawei_asg2100:
+huawei-asg2100:
   dsl:
     - "contains(body, 'HUAWEI ASG2100')"
 
@@ -1974,14 +1892,6 @@ ruijie-switch:
 sangfor-application-delivery:
   dsl:
     - "contains(body, '/static/es5_shim/es5-sham.js')"
-
-sangfor-m5500:
-  dsl:
-    - "contains(body, 'value=\"m5500-q')"
-
-sangfor-p5100:
-  dsl:
-    - "contains(body, 'p5100')"
 
 schneider-quantum-140noe77101:
   dsl:
