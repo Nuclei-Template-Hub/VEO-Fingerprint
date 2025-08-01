@@ -153,10 +153,6 @@ citrix-metaframe:
   dsl:
     - "contains(body, 'window.location=\"/Citrix/MetaFrame')"
 
-citrix-netscaler:
-  dsl:
-    - "contains(body, 'NS-CACHE')"
-
 citrix-receiver:
   dsl:
     - "contains(body, 'upgradeavailable-already-installed-separator bar-separator')"
@@ -451,7 +447,7 @@ ecash-system:
     - "contains(body, '<br>欢迎使用e-cash系统')"
 
 
-泛微ecology-emobile:
+泛微ecology/emobile:
   dsl:
     - "contains(body, 'window.apiprifix = \"/emp\";')"
     - "icon('/favicon.ico', '41eca7a9245394106a09b2534d8030df')"
@@ -567,11 +563,6 @@ fortinet-fortiguard:
   dsl:
     - "contains(body, '/xx/yy/zz/ci/mgpghgpgpfghcdpfggogfgeh')"
 
-fortinet-fortimail:
-  dsl:
-    - "contains(body, 'location=\"/m/webmail/\";')"
-    - "contains(body, '<script language=javascript>')"
-
 fortinet-sslvpn:
   dsl:
     - "contains(body, '/sslvpn/portal.html')"
@@ -607,6 +598,11 @@ gitlab:
 h2-database:
   dsl:
     - "contains(body, 'welcome to h2')"
+
+h3c-网管系统:
+  dsl:
+    - "contains(body, 'Web user login')"
+    - "contains(body, '/webui/images/basic/login/back.jpg')"
 
 h3c-cloud:
   dsl:
@@ -925,10 +921,6 @@ juniper-hdr:
   dsl:
     - "contains(body, '/hdr_logo.gif')"
 
-juniper-vpn:
-  dsl:
-    - "contains(body, 'pulse connect secure')"
-
 jupyter-notebook:
   dsl:
     - "contains(body, '<div id=\"ipython_notebook\" class=\"nav navbar-brand\">')"
@@ -956,10 +948,6 @@ kentico-cms:
 kindeditor:
   dsl:
     - "contains(body, 'kindeditor-min.js')"
-
-kingdee-oa:
-  dsl:
-    - "contains(body, 'img src=\"images/logo-kingdee.gif\"')"
 
 landmark-dus:
   dsl:
@@ -1274,7 +1262,8 @@ yonyou-rmis:
   dsl:
     - "contains(body, 'href=\"clientfile/rmisupdate.exe')"
 
-seeyon-oa:
+致远oa:
+  tags: redteam,oa,seeyon
   path: "/seeyon/main.do"
   dsl:
     - "contains(body, 'href=\"/seeyon/common/images/')"
@@ -1303,7 +1292,8 @@ yonyou-u8:
   dsl:
     - "contains(body, '开启u8 cloud云端之旅')"
 
-yonyou-uclient:
+用友uclient/nc:
+  tags: oa,yonyou,nc,uclient
   dsl:
     - "contains(body, 'http-equiv=refresh content=0;url=index.jsp')"
 
@@ -1410,8 +1400,11 @@ ngaf:
 
 红帆ioffice:
   dsl:
+    - "contains(body, 'HFOffice')"
     - "contains(body, 'hongfan. all rights reserved')"
     - "contains(body, 'xspreadsheet.css')"
+    - "contains(body, 'js/sheet/xspreadsheet.css')"
+    - "contains(body, 'window.location.href=\"/website/#/')"
 
 联软it安全运维管理系统:
   dsl:
@@ -1706,6 +1699,7 @@ barracuda-spam-firewall:
 iis:
   dsl:
     - "contains(body, 'iisstart.png')"
+    - "contains(header, 'Microsoft-IIS/')"
 
 chart-js:
   dsl:
@@ -1840,6 +1834,7 @@ kingdee-k3-cloud:
 kingdee-oa:
   dsl:
     - "contains(body, 'logo-kingdee.png')"
+    - "contains(body, 'images/logo-kingdee.gif')"
 
 网御waf:
   dsl:
@@ -2022,8 +2017,10 @@ asp.net-web-api:
     - "contains(header, 'home/locationIndex.action?time=')"
 
 用友nccloud:
+  tags: yonyou,oa,redteam,nccloud
   dsl:
     - "contains(body, 'yonyou-yyy.js')"
+    - "contains(body, 'url=nccloud')"
 
 致远m3-server:
   dsl:
@@ -2034,7 +2031,6 @@ asp.net-web-api:
     - "contains(body, 'jc6/platform')"
     - "contains(body, 'content=\"0.1;url=/jc6')"
     - "contains(body, 'JHSoft.Web.')"
-
 
 爱数anyshare(oem):
   dsl:
@@ -2048,11 +2044,15 @@ asp.net-web-api:
   dsl:
     - "contains(url, 'portal/cas/login/')"
     - "contains(body, 'portal/skin/redblack')"
+    - "contains(body, 'portal/ui/static/i18n')"
+    - "contains(body, 'portal/ui/static/css')"
+    - "contains(header, '/portal/')"
 
 大华dss:
   dsl:
     - "contains(url, 'login_init.action')"
     - "contains(body, 'IE8_WindowsXP_x86_CHS.exe')"
+    - "contains(body, 'http-equiv=\"refresh\" content=\"1;URL='/admin'')"
 
 大华icc:
   dsl:
@@ -2127,7 +2127,7 @@ unibox:
   dsl:
     - "contains(body, 'adminfront/login/')"
     - "contains(url, 'adminfront/login/')"
-    - "contains(header, 'location: adminx/login.php')"
+    - "contains(body, 'progid:DXImageTransform.Microsoft.AlphaImageLoader')"
 
 用友bip:
   dsl:
@@ -2137,3 +2137,76 @@ casdoor:
   dsl:
     - "contains(body, 'SSO - An Identity and Access Management')"
     - "contains(url,'static/media/SSO.')"
+
+中成科信票务管理平台:
+  dsl:
+    - "contains(body, 'SystemManager/mainClone.html')"
+
+好视通云会议:
+  dsl:
+    - "contains(body, 'images/cn/logind_but1.gif')"
+
+
+紫光档案管理系统:
+  dsl:
+    - "contains(body, '/Login/login/selfverify.html')"
+    - "contains(body, 'Public/images/login_logo.png')"
+
+全程云办公:
+  dsl:
+    - "contains(body, 'images/yiyaoshi.png')"
+    - "contains(body, '全程云')"
+    - "contains(body, 'location.href='/oa/'')"
+asp.net-viewstate:
+  dsl:
+    - "contains(body, 'id=\"__VIEWSTATE\" value=\"')"
+
+nginx:
+  dsl:
+    - "contains(header, 'nginx')"
+
+apache:
+  dsl:
+    - "contains(header, 'Apache')"
+
+jsessionid:
+  dsl:
+    - "contains(header, 'JSESSIONID=')"
+
+interlib电子资源馆外访问系统:
+  tags: interlib,redteam
+  dsl:
+    - "contains(body, 'pace-theme-barber-shop.css')"
+    - "contains(body, 'interlibSSO')"
+    - "contains(body, 'cmdACT=ipLogin')"
+
+江苏叁拾叁OA:
+  dsl:
+    - "contains(body, '.modal-content')"
+    - "contains(body, '账号密码中包含sql关键字，请及时修改')"
+
+润乾报表:
+  dsl:
+    - "contains(body, 'demo/reportJsp/showReport.jsp')"
+    - "contains(body, 'dashboard/dashboard.rpx')"
+
+超图软件SuperMap-iServer:
+  dsl:
+    - "contains(body, 'SuperMap iServer')"
+    - "contains(body, 'window.location.href=\"iserver\"')"
+    - "contains(body, 'iserver/manager')"
+
+万户-ezoffice:
+  dsl:
+    - "contains(body, '/defaultroot')"
+    - "contains(body, 'fa-times-circle-o username_clear')"
+
+北京中科聚网信息技术有限公司一体化运营平台:
+  dsl:
+    - "contains(body, '/member/home/loginByQR')"
+    - "contains(body, 'permission/setPermissionNew?ownerId=')"
+
+时空智友:
+  dsl:
+    - "contains(body, 'login.jsp?login=null')"
+    - "contains(body, '<div class=\"company\">企业流程化管控系统')"
