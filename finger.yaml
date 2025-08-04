@@ -2210,3 +2210,13 @@ interlib电子资源馆外访问系统:
   dsl:
     - "contains(body, 'login.jsp?login=null')"
     - "contains(body, '<div class=\"company\">企业流程化管控系统')"
+
+nacos:
+  dsl:
+    - "contains(body, '<title>Nacos</title>')"
+    - "contains(body, 'console-ui/public/img/favicon.ico')"
+
+minio:
+  dsl:
+    - "contains(body, '<title>MinIO Console</title>')"
+    - "contains(body, 'background-wave-orig2.svg')"
