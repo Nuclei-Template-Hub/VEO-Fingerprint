@@ -2,10 +2,6 @@ apache-activemq:
   dsl:
     - "contains(body, '<title>Apache ActiveMQ</title>')"
 
-apache-airflow:
-  dsl:
-    - "contains(body, '<span>airflow</span>')"
-
 apache-ambari:
   dsl:
     - "contains(body, '\"/licenses/NOTICE.txt\"')"
@@ -43,11 +39,6 @@ apache-forrest:
 apache-guacamole:
   dsl:
     - "contains(body, 'scripts/guac-ui.js')"
-
-apache-hadoop:
-  dsl:
-    - "contains(body, '/static/hadoop-st.png')"
-    - "contains(body, 'parseHadoopProgress')"
 
 apache-hadoop-yarn:
   dsl:
@@ -145,10 +136,6 @@ citec-system:
   dsl:
     - "contains(body, '正在使用腾讯qq帐号登录消防联网系统')"
 
-citrix-access-gateway:
-  dsl:
-    - "contains(body, 'receiver/images/common/icon_vpn.ico')"
-
 citrix-metaframe:
   dsl:
     - "contains(body, 'window.location=\"/Citrix/MetaFrame')"
@@ -169,10 +156,6 @@ citrix-xenmobile:
 citrix-xenserver:
   dsl:
     - "contains(body, '<a href=\"xencentersetup.exe\">xencenter installer</a>')"
-
-cmseasy:
-  dsl:
-    - "contains(body, 'content=\"cmseasy')"
 
 cmspro:
   dsl:
@@ -402,10 +385,6 @@ e-soonlink:
   dsl:
     - "contains(body, '志高易联')"
 
-e-tiller:
-  dsl:
-    - "contains(body, '北京勤云')"
-
 eagleeye:
   dsl:
     - "contains(body, 'eagleeye 钉钉答疑群')"
@@ -521,6 +500,7 @@ fastadmin-framework:
   path: "/assets/img/error.svg"
   dsl:
     - "contains(body, '<desc>Created with Sketch.</desc>')"
+    - "contains(body, 'fastadmin')"
 
 fe-oa:
   dsl:
@@ -530,13 +510,11 @@ feifeicms:
   dsl:
     - "contains(body, 'data-target=\"#navbar-feifeicms\"')"
 
-fisheye:
-  dsl:
-    - "contains(body, 'fisheye-16.ico')"
-
 fit2cloud-jumpserver:
   dsl:
-    - "contains(body, '<title>JumpServer</title>')"
+    - "contains(body, 'pathname.startsWith('/core')"
+    - "contains(body, 'JumpServer 开源堡垒机')"
+    - "contains(body, 'core/auth/password/forget/previewing')"
 
 flower-celery-monitoring-tool:
   dsl:
@@ -594,6 +572,7 @@ gitlab:
     - "icon('/favicon.ico', '85c754581e1d4b628be5b7712c042224')"
     - "contains(body, 'is_gitlab_team_member')"
     - "contains(header,'x-gitlab-meta')"
+    - "contains(body, 'assets/gitlab_logo')"
 
 h2-database:
   dsl:
@@ -1039,7 +1018,7 @@ qz-safe-mail:
 
 rabbitmq:
   dsl:
-    - "contains(body, 'RabbitMQ Management')"
+    - "contains(body, '<title>RabbitMQ Management</title>')"
 
 richinfo-richmail:
   dsl:
@@ -1138,10 +1117,6 @@ sangfor-vd:
   dsl:
     - "contains_all(body, 'login_psw.csp','VDI')"
 
-sangfor-zero-trust-integrated-gateway:
-  dsl:
-    - "contains(body, '<title>aTrust')"
-
 seafile:
   dsl:
     - "contains(body, 'seafile')"
@@ -1206,7 +1181,7 @@ vmware-vsphere:
 
 xinnet-mail:
   dsl:
-    - "contains(body, '/webmail//cssv2/tamail.css')"
+    - "contains(body, 'cssv2/tamail.css')"
 
 xstream:
   dsl:
@@ -1385,13 +1360,10 @@ waf:
     - "contains(body, 'Redirect to...')"
     - "contains(body, '/LogInOut.php')"
 
-ngaf:
-  condition: and
+深信服atrust:
   dsl:
-    - "contains(body, 'SANGFOR')"
-    - "contains(body, 'NGAF')"
-    - "contains(body, 'login')"
-
+    - "contains(body, 'isClient = /atrusttray')"
+    - "contains(body, 'window.allModuleLoadSuccess')"
 
 金山企业安全终端防护优化系统:
   dsl:
@@ -1426,6 +1398,9 @@ spring-env:
 weblogic:
   dsl:
     - "contains(body, '<title>Oracle WebLogic Server 管理控制台</title>')"
+    - "contains(body, '<i>Hypertext Transfer Protocol -- HTTP/1.1</i>')"
+    - "contains(body, 'Error 404--Not Found')"
+    - "contains(body, 'Error 403--')"
 
 fanwei-emobile:
   dsl:
@@ -1475,7 +1450,7 @@ ruoyi:
 
 aws-s3-bucket:
   dsl:
-    - "contains(body, 'InvalidBucketName','aliyuncs')"
+    - "contains_all(body, 'InvalidBucketName','aliyuncs')"
 
 sslvpn:
   condition: and
@@ -1525,11 +1500,7 @@ gsis:
 
 safedog:
   dsl:
-    - "contains(body, '404.safedog.cn/images/safedogsite/broswer_logo.jpg')"
-
-nexus:
-  dsl:
-    - "contains(body, 'Nexus Repository Manager')"
+    - "contains(body, '404.safedog.cn')"
 
 阿里云cdn:
   dsl:
@@ -1650,6 +1621,7 @@ hadoop-applications:
 smartbi-insight:
   dsl:
     - "contains(body, 'smartbi.gcf.gcfutil')"
+    - "contains(body, 'writeCustomBgImg.jsp')"
 
 hfs:
   dsl:
@@ -1995,6 +1967,7 @@ asp.net-web-api:
     - "contains(body, 'client/jquery.client_wev8.js')"
     - "contains(body, 'ecology8/lang/weaver_lang_7_wev8.js')"
     - "contains(body, 'typeof poppedwindow')"
+    - "contains(header, 'ecology_JSessionid')"
 
 汉王智慧园区:
   dsl:
@@ -2220,3 +2193,1318 @@ minio:
   dsl:
     - "contains(body, '<title>MinIO Console</title>')"
     - "contains(body, 'background-wave-orig2.svg')"
+
+zabbix:
+  dsl:
+    - "contains_all(body, 'zabbix','Zabbix SIA')"
+
+列目录:
+  dsl:
+    - "contains(body, 'Index of /')"
+
+禅道:
+  dsl:
+    - "contains(header, 'zentaosid')"
+    - "contains(body, '/theme/default/images/main/zt-logo.png')"
+
+启明星辰天清汉马USG防火墙:
+  dsl:
+    - "contains(body, '天清汉马USG')"
+    - "contains(body, '/cgi-bin/webui?op=get_product_model')"
+
+CoreMail:
+  dsl:
+    - "contains(body, 'coremail/common')"
+
+深信服应用交付报表系统:
+  dsl:
+    - "contains(body, '/reportCenter/index.php?cls_mode=cluster_mode_others')"
+
+深信服上网行为管理系统:
+  dsl:
+    - "contains(body, 'document.write(WRFWWCSFBXMIGKRKHXFJ')"
+    - "contains(body, 'utccjfaewjb = function(str, key')"
+
+蓝凌OA:
+  dsl:
+    - "contains_all(body, '蓝凌软件','App_Themes/Login')"
+    - "contains(body, 'sys/ui/extend/theme/default/style/icon.css')"
+
+天融信防火墙:
+  dsl:
+    - "contains_all(body, 'TOPSEC','image/aaa.png','username')"
+
+天玥运维安全网关:
+  dsl:
+    - "contains_all(body, 'css/fw/full.css','js/p/login.js','login')"
+
+PbootCMS:
+  dsl:
+    - "contains(body, 'PbootSystem')"
+    - "contains(body, 'pbootcms.min.css')"
+
+日志易:
+  dsl:
+    - "contains_all(body, 'auth/passwordReset','yw-login','yw-login-logo')"
+
+九思OA:
+  dsl:
+    - "contains(body, '/jsoa/login.jsp')"
+
+shiro:
+  dsl:
+    - "contains(header, 'rememberMe=')"
+    - "contains(header, '=deleteMe')"
+
+phpsessid:
+  dsl:
+    - "contains(heder, 'PHPSESSID=')"
+
+thinkphp:
+  dsl:
+    - "contains(heder, 'ThinkPHP')"
+    - "contains(body, 'index.php?m=&c=index&')"
+
+php:
+  dsl:
+    - "contains(header, 'PHP/')"
+
+tp-link-产品:
+  dsl:
+    - "contains(header, 'TP-LINK')"
+
+pbootcms:
+  dsl:
+    - "contains(header, 'PbootSystem')"
+    - "contains(header, 'PbootCMS')"
+
+nexus-repository-manager:
+  dsl:
+    - "title('Nexus Repository Manager')"
+
+360天堤新一代智慧防火墙:
+  dsl:
+    - "contains(body, '360天堤')"
+    - "contains(body, '360防火墙')"
+
+360天擎:
+  dsl:
+    - "title('360天擎')"
+
+360网神防火墙系统:
+  dsl:
+    - "contains(body, '网神防火墙系统')"
+
+401-登陆认证:
+  dsl:
+    - "title('401 Authorization')"
+
+4images:
+  dsl:
+    - "contains(body, 'Powered by <b>4images')"
+    - "contains(body, '4homepages')"
+
+53bk数字报刊系统:
+  dsl:
+    - "contains(body, '/Comja/')"
+
+78-oa:
+  dsl:
+    - "contains(body, '/resource/javascript/system/runtime.min.js')"
+
+acenet-驰崴防火墙:
+  dsl:
+    - "contains(body, 'Technology')"
+    - "contains(body, 'login_commit.php')"
+
+apache-airflow:
+  dsl:
+    - "title('Airflow - Login')"
+
+apache-hadoop:
+  dsl:
+    - "contains(body, 'static/hadoop-st.png')"
+    - "contains(body, 'Cluster')"
+
+apache-shenyu:
+  dsl:
+    - "contains(body, 'id=\"httpPath')"
+    - "contains(body, 'th:text=\"${domain}')"
+
+apache2-debian-默认页:
+  dsl:
+    - "contains(body, 'Apache2 Debian Default')"
+    - "contains(body, 'It works!')"
+    - "contains(body, 'Debian Logo')"
+
+apache2-ubuntu-默认页:
+  dsl:
+    - "contains(body, 'Apache2 Ubuntu Default Page')"
+    - "contains(body, 'ubuntu-logo.png')"
+
+canal-admin:
+  dsl:
+    - "contains(body, 'Canal Admin')"
+
+cas-单点登录:
+  dsl:
+    - "contains(body, 'Central Authentication Service')"
+    - "contains(body, 'cas/login')"
+
+centos-默认页面:
+  dsl:
+    - "contains(body, '<title>Welcome to CentOS</title>')"
+    - "contains(body, 'img/centos-logo.png')"
+    - "contains(body, 'centos.org')"
+
+cisco-sslvpn:
+  dsl:
+    - "contains(body, '/+CSCOE+/logon.html')"
+
+citrix-access-gateway:
+  dsl:
+    - "contains_all(body, 'Citrix Access Gateway','login')"
+
+cmseasy:
+  dsl:
+    - "contains(body, 'content=\"CmsEasy')"
+
+cmstop:
+  dsl:
+    - "contains(body, 'css/cmstop-common.css')"
+    - "contains(body, 'js/cmstop-common.js')"
+
+consul-by-hashicorp:
+  dsl:
+    - "title('Consul')"
+
+douphp:
+  dsl:
+    - "contains(body, 'Powered by DouPHP')"
+    - "contains(body, 'DouPHP')"
+
+dreamer-cms:
+  dsl:
+    - "contains(header, 'dreamer-cms')"
+
+dreamer-cms-shiro:
+  dsl:
+    - "contains(header, 'dreamer-')"
+
+e-mobile:
+  dsl:
+    - "contains(body, 'weaver,e-mobile')"
+
+e-tiller:
+  dsl:
+    - "contains(body, '北京勤云')"
+    - "contains(body, 'reader/view_abstract.aspx')"
+
+emlog:
+  dsl:
+    - "contains(body, 'content=\"emlog\"')"
+
+enesys:
+  dsl:
+    - "contains(body, 'dwr/interface/WebContextUtil.js')"
+
+entercrm:
+  dsl:
+    - "contains(body, '杭州恩软')"
+    - "contains(body, 'Ent.base.js')"
+
+epoint政务服务系统:
+  dsl:
+    - "contains(body, 'epoint-web-zwdt')"
+
+espcms:
+  dsl:
+    - "title('powered by espcms')"
+
+finecms:
+  dsl:
+    - "contains(body, 'content=\"FineCMS')"
+
+fisheye:
+  dsl:
+    - "contains(header, 'FESESSIONID=')"
+    - "contains(body, 'fisheye-16.ico')"
+
+gitblit:
+  dsl:
+    - "contains(body, 'gitblt-favicon.png')"
+    - "contains(body, 'gitblit')"
+
+gitbook:
+  dsl:
+    - "contains(body, 'content=\"GitBook')"
+    - "contains(body, 'gitbook')"
+
+grafana:
+  dsl:
+    - "contains(body, 'Grafana')"
+    - "contains(body, 'grafana-app')"
+    - "contains(body, '<title>Grafana</title>')"
+
+growatt-系统:
+  dsl:
+    - "contains(body, 'v3/js/odm/odm.js')"
+
+h3c-er3200-路由器:
+  dsl:
+    - "contains(body, 'ER3200')"
+    - "contains(body, 'home.asp')"
+    - "contains(body, 'h3c.com')"
+
+h3c-er8300g2-x:
+  dsl:
+    - "contains(body, 'H3C')"
+    - "contains(body, 'vld.bmp')"
+    - "contains(body, 'dis_login')"
+    - "contains(body, 'ER8300G2')"
+
+h3c-web网管:
+  dsl:
+    - "contains(body, 'webui')"
+    - "contains(body, 'Web网管用户登录')"
+    - "contains(body, 'china_logo.jpg')"
+
+h3c安博通任子行oem系列安全产品:
+  dsl:
+    - "contains(body, 'webui/js/jquerylib/jquery-1.7.2.min.js')"
+
+hdwiki:
+  dsl:
+    - "contains(header, 'hd_sid=')"
+
+huawei-smc:
+  dsl:
+    - "contains(body, 'Script/SmcScript.js?version=')"
+
+huawei-user-login:
+  dsl:
+    - "contains(header, 'Huawei Auth-Http')"
+
+hue-大数据框架:
+  dsl:
+    - "contains(body, 'Welcome to Hue')"
+    - "contains(body, 'Query. Explore.')"
+
+ibm-http-server:
+  dsl:
+    - "contains(body, 'IBM HTTP Server')"
+
+ibos酷办公oa系统:
+  dsl:
+    - "contains_all(body, 'login-panel','loginsubmit')"
+
+idste融合系统支撑平台:
+  dsl:
+    - "title('iDste融合系统支撑平台')"
+
+ids联网数字标牌管理系统:
+  dsl:
+    - "title('iDS联网数字标牌管理系统')"
+
+igenus邮件系统:
+  dsl:
+    - "contains_all(body, 'iGENUS','login.php','language')"
+
+imo云办公室:
+  dsl:
+    - "contains(body, '<a title=\"imo云办公室\"')"
+    - "contains(body, '高效率网上办公平台')"
+    - "contains(body, 'imo_setup.exe')"
+
+influxdb:
+  dsl:
+    - "contains(header, 'X-Influxdb')"
+
+ip-guard:
+  dsl:
+    - "contains(body, 'IP-guard')"
+itc-cms:
+  dsl:
+    - "contains(body, '/mt_res_v3/js/common/common.js')"
+    - "contains(body, '<title>CMS')"
+
+ixcache:
+  dsl:
+    - "contains(body, 'iXCache')"
+    - "contains(body, '/login/userverify.cgi')"
+
+jielink智能终端操作平台:
+  dsl:
+    - "contains(body, 'JieLink<sup>+</sup>')"
+
+kesioncms:
+  dsl:
+    - "contains(body, 'ks_inc/common.js')"
+    - "contains(body, 'KesionCMS')"
+
+kibana:
+  dsl:
+    - "title('Kibana')"
+
+kubernetes:
+  dsl:
+    - "title('Kubernetes Dashboard')"
+
+kvm_创梦云计算管理系统:
+  dsl:
+    - "contains(body, '<title>KVM_创梦云计算管理系统</title>')"
+
+kyan-监控设备:
+  dsl:
+    - "contains_all(body, 'login_files','欢迎登陆系统')"
+
+lanmp-默认页面:
+  dsl:
+    - "contains(body, '<title>LANMP')"
+    - "contains(body, '<strong>恭喜')"
+    - "contains(body, '本页可删除')"
+
+lanproxy:
+  dsl:
+    - "contains(body, 'LanProxy')"
+    - "contains(body, 'lanproxy-config')"
+
+lnmp一键安装包默认页面:
+  dsl:
+    - "title('LNMP一键安装包')"
+
+manageengine-admanager-plus:
+  dsl:
+    - "contains(body, 'ADManager')"
+    - "contains(body, 'Hashtable.js')"
+    - "contains(body, 'ManageEngine')"
+
+messagesolution-enterprise-email-archiving-eea:
+  dsl:
+    - "contains(body, 'MessageSolution')"
+
+metabase:
+  dsl:
+    - "title('Metabase')"
+
+mobileiron-log4j:
+  dsl:
+    - "title('MobileIron User Portal: Sign In')"
+
+nagios-xi:
+  dsl:
+    - "contains(body, 'Nagios XI')"
+    - "contains(body, 'nagiosxi')"
+    - "contains(body, 'Nagios')"
+
+nnetgear-路由器:
+  dsl:
+    - "contains(header, 'NETGEAR')"
+
+nortekcontrollinearemerge:
+  dsl:
+    - "contains(body, 'img/emerge.ico')"
+    - "contains(body, 'login_pw')"
+
+novnc-远程访问:
+  dsl:
+    - "contains(body, 'noVNC')"
+
+nps:
+  dsl:
+    - "contains_all(body, 'nps','ehang')"
+
+nsfocus-绿盟安全设备:
+  dsl:
+    - "contains(header, 'NSFOCUS')"
+
+nuuo-摄像头:
+  dsl:
+    - "title('Network Video Recorder Login')"
+
+
+openshift-web-console:
+  dsl:
+    - "title('OpenShift Web Console')"
+
+outlook:
+  dsl:
+    - "contains_all(body, 'owa/auth','logonDiv')"
+
+panabit-panalog:
+  dsl:
+    - "contains_all(body, 'Maintain','unamexx')"
+
+phpshe-商城系统:
+  dsl:
+    - "contains(body, 'Powered by phpshe')"
+    - "contains(body, 'include/js/global.js')"
+
+phpstydy-windows:
+  dsl:
+    - "title('phpstudy for windows')"
+
+phpwind:
+  dsl:
+    - "contains(body, 'content=\"phpwind')"
+
+prometheus-server:
+  dsl:
+    - "title('Prometheus Time Series Collection and Processing Server')"
+
+regentapi_v20:
+  dsl:
+    - "contains(body, 'RegentApi_v2.0')"
+
+richmail-邮件系统:
+  dsl:
+    - "title('RichMail')"
+    - "contains(body, '0;url=/webmail/')"
+    - "contains(body, 'richmail.config.js')"
+
+sangfor-ssl-vpn:
+  dsl:
+    - "contains(body, '/por/login_psw.csp')"
+    - "contains(body, 'loginPageSP/loginPrivacy.js')"
+
+sdcms神盾内容管理系统:
+  dsl:
+    - "contains(body, 'sdcms')"
+
+spring-eureka:
+  dsl:
+    - "contains(body, '<title>Eureka</title>')"
+    - "contains(body, 'eureka')"
+
+tamronos-iptv系统:
+  dsl:
+    - "contains(body, 'TamronOS')"
+    - "contains(body, 'tamronos.com')"
+
+teleport-堡垒机:
+  dsl:
+    - "contains(body, 'TELEPORT')"
+    - "contains(body, 'login-account')"
+    - "contains(body, 'login-type-oath')"
+
+tencent-exmail:
+  dsl:
+    - "contains(header, 'ssl_edition=mail.qq.com')"
+    - "contains(body, 'cgi-bin/getinvestigate?flowid=')"
+    - "contains(body, 'cgi-bin/bizmail_portal')"
+
+
+turbomail-邮件系统:
+  dsl:
+    - "contains(body, 'TurboMail')"
+    - "contains(body, 'mailmain?type=login')"
+
+twcms:
+  dsl:
+    - "contains(body, 'href=\"/twcms/theme/default/css/global.css')"
+
+typecho:
+  dsl:
+    - "contains(body, 'typecho')"
+    - "contains(body, 'usr/themes')"
+
+v2-conference-视频会议系统:
+  dsl:
+    - "contains(body, 'window.location.href=\"/Conf/index.jsp\"')"
+
+va-虚拟应用管理平台:
+  dsl:
+    - "contains(body, 'Res/Images/logo_va.png')"
+    - "contains(body, 'panel_login')"
+
+webmin:
+  dsl:
+    - "contains_all(body, 'Webmin','session_login')"
+
+weiphp:
+  dsl:
+    - "contains(body, 'weiphp.css')"
+
+wifisky-7层流控路由器:
+  dsl:
+    - "contains(body, 'WIFISKY')"
+    - "contains(body, 'adminusr')"
+    - "contains(body, '深圳市领空技术')"
+
+wordpress:
+  dsl:
+    - "contains(body, 'wp-admin')"
+    - "contains(body, 'wp-content/themes/')"
+
+wps-部署可视化平台:
+  dsl:
+    - "title('WPS 部署可视化平台')"
+
+xampp-默认页面:
+  dsl:
+    - "title('Welcome to XAMPP')"
+
+yapi-可视化接口管理平台:
+  dsl:
+    - "contains(body, 'YApi')"
+    - "contains(body, 'id=\"yapi\"')"
+    - "contains(body, '可视化接口管理平台')"
+
+yii框架:
+  dsl:
+    - "contains(body, 'yii.js')"
+    - "contains(body, 'yii.')"
+
+yzmcms:
+  dsl:
+    - "contains(body, 'YzmCMS')"
+    - "contains(body, 'yzm-common.css')"
+
+万户网络ezeip:
+  dsl:
+    - "contains(body, 'Powered By wanhu - www.wanhu.com.cn')"
+    - "contains(body, 'ezEip')"
+
+东华医疗协同办公系统:
+  dsl:
+    - "contains(body, 'extcomponent/security/login.jsp')"
+    - "contains(body, 'login_dhc')"
+
+东胜物流软件:
+  dsl:
+    - "contains(body, 'js/dhtmlxcombo_whp.js')"
+
+东营金石软件:
+  dsl:
+    - "contains_all(body, 'aspNetHidden','txtLoginName')"
+
+中农信达三资云平台:
+  dsl:
+    - "contains(body, '技术支持：北京中农信达信息技术有限公司')"
+
+中新金盾信息安全管理系统:
+  dsl:
+    - "contains(body, '中新金盾信息安全管理系统')"
+
+中腾oa:
+  dsl:
+    - "contains(body, 'systemAction')"
+    - "contains(body, 'zt_webframe')"
+
+中远麒麟堡垒机:
+  dsl:
+    - "contains(body, 'controller=admin_index&action=login')"
+
+云信通短信运营管理平台:
+  dsl:
+    - "contains(body, 'Simpla')"
+    - "contains(body, 'chklogin.aspx')"
+
+亿赛通dlp:
+  dsl:
+    - "contains(body, 'CDGServer3')"
+    - "contains(body, 'welcomebg.jpg')"
+
+亿邮邮件系统:
+  dsl:
+    - "contains_all(body, 'eYou','tpl/user')"
+
+任我行-crm:
+  dsl:
+    - "contains(body, '/Handlers/IdentifyingCode.ashx')"
+
+任我行-管家婆分销erp:
+  dsl:
+    - "contains(body, '分销ERP')"
+    - "contains(body, 'txt_DbName')"
+    - "contains(body, 'DownloadDriver.asp')"
+
+全息ai弱电网络综合运维平台:
+  dsl:
+    - "contains(body, '全息AI')"
+    - "contains(body, 'g_is_hk')"
+
+冰峰网络-iceflow:
+  dsl:
+    - "contains(body, 'Web 配置中心')"
+    - "contains(body, '/images/splash.jpg')"
+
+化视私云cdn直播加速服务器:
+  dsl:
+    - "contains(body, 'img/dl.gif')"
+    - "contains(body, '华视美达')"
+
+华为ar-web管理平台:
+  dsl:
+    - "contains(body, 'Huawei')"
+    - "contains(body, 'simple/style/default/image/login.png')"
+    - "contains(body, 'simple/view/ossn.html')"
+
+华为云桌面:
+  dsl:
+    - "contains(body, 'Desktop@FusionAccess')"
+
+华夏-erp:
+  dsl:
+    - "contains(body, 'jshERP-boot')"
+    - "contains(body, 'platformConfig')"
+
+华天动力oa:
+  dsl:
+    - "contains(body, 'OAapp/WebObjects/OAapp.woa')"
+
+协众oa:
+  dsl:
+    - "contains(body, 'scripts/cnoa.extra.js')"
+
+南方数码交易一体化系统:
+  dsl:
+    - "contains(body, '/SouthUIContent/themes/easydropdown.css')"
+
+博华网龙信息安全一体机:
+  dsl:
+    - "title('博华网龙信息安全一体机')"
+
+厦门快普:
+  dsl:
+    - "contains(body, 'jKPM6')"
+    - "contains(body, 'WebResource.axd')"
+
+同鑫t9ehr信息化管理系统:
+  dsl:
+    - "contains(body, 'T9eHR-iconfont')"
+    - "contains(body, 'Authentication/Login')"
+
+后台:
+  dsl:
+    - "title('后台')"
+
+向日葵-sunlogin:
+  dsl:
+    - "contains(body, '{\"success\":false,\"msg\":\"Verification failure\"}')"
+
+启明星辰天清汉马usg防火墙:
+  dsl:
+    - "contains(body, '/cgi-bin/webui?op=get_product_model')"
+    - "contains(body, '天清汉马USG')"
+
+启明某vpn设备:
+  dsl:
+    - "contains(body, 'cover_admin.css')"
+    - "contains(body, 'SSLVPN LOGIN')"
+
+启迪国信-uem管理平台:
+  dsl:
+    - "contains(body, '#commonTip')"
+    - "contains(body, 'wwLogin')"
+
+和欣控制hysine-webtalk-系统:
+  dsl:
+    - "contains(body, '_webtalk/_cur/loginA.php')"
+    - "contains(body, 'WEBTALK')"
+
+品德科技医学在线考试系统:
+  dsl:
+    - "contains(body, '考试系统')"
+    - "contains(body, '品德')"
+    - "contains(body, 'login.aspx')"
+
+唯德科创-ipeasy-知易通:
+  dsl:
+    - "title('_IPEasy知易通')"
+
+多媒体信息发布系统:
+  dsl:
+    - "contains(header, 'HowFor Web')"
+
+大华安防-dss:
+  dsl:
+    - "contains(body, '<meta http-equiv=\"refresh\" content=\"1;URL='admin'\"/>')"
+
+大汉版通-hanweb-system:
+  dsl:
+    - "contains(body, '大汉版通')"
+    - "contains(body, '大汉网络')"
+    - "contains(body, 'hanweb.com' style='display:none')"
+
+天擎:
+  dsl:
+    - "contains(body, '天擎</title>')"
+
+天玥网络安全审计系统:
+  dsl:
+    - "contains(body, '天玥')"
+    - "contains(body, 'venustech')"
+
+
+天融信-上网行为管理系统:
+  dsl:
+    - "contains(body, 'dkey_activex_download.php')"
+    - "contains(body, 'login_commit.php')"
+
+天融信topapp负载均衡系统:
+  dsl:
+    - "contains(body, 'TopAPP负载均衡系统')"
+    - "contains(body, '天融信')"
+
+天融信vpn:
+  dsl:
+    - "contains(header, 'topsecsvportalstyle')"
+
+天融信vpn设备:
+  dsl:
+    - "contains(header, 'topsecsvportalname')"
+
+天融信web应用安全防护系统:
+  dsl:
+    - "contains_all(body, 'module=login','topsec')"
+
+天融信产品:
+  dsl:
+    - "contains(body, '<TITLE>Web User Login')"
+
+天融信应用交付系统:
+  dsl:
+    - "contains(body, 'TopApp-AD')"
+
+天迈科技网络视频监控系统:
+  dsl:
+    - "contains(body, '天迈科技')"
+    - "contains(body, '网络视频监控系统')"
+
+好视通:
+  dsl:
+    - "contains_all(body, 'loginCheck.do','app.result')"
+
+好视通视频会议系统:
+  dsl:
+    - "contains(body, 'resources/commonImage/favicon.ico')"
+    - "contains(body, 'login/createQRCode.do')"
+
+宁盾一体化安全认证平台:
+  dsl:
+    - "contains(body, 'am/ndkey.ico')"
+    - "contains(body, 'zhLanguagePng')"
+
+安宁电子邮件系统anymacro-mail:
+  dsl:
+    - "contains(body, 'anymacro')"
+    - "contains(body, 'passre.php')"
+
+安恒云堡垒机:
+  dsl:
+    - "contains(body, 'DBAPPSecurity')"
+    - "contains(body, '安恒云堡垒机')"
+
+安恒数据大脑api网关:
+  dsl:
+    - "contains(body, 'mssp-fe')"
+
+安恒明御安全网关:
+  dsl:
+    - "title('明御安全网关')"
+
+宏景ehr人力资源信息管理系统:
+  dsl:
+    - "contains(body, '人力资源信息管理系统')"
+    - "contains(body, 'hrlogon')"
+
+宝塔-btcn:
+  dsl:
+    - "contains(body, '入口校验失败')"
+    - "contains(body, '<title>恭喜，站点创建成功')"
+    - "contains(body, '面板系统后台')"
+    - "contains(body, '系统自动生成')"
+    - "contains(body, '扫码登录更安全')"
+    - "contains(body, 'bt.cn')"
+    - "contains(body, '站点创建成功')"
+    - "contains(body, '宝塔')"
+    - "contains(body, '宝塔Linux面板')"
+
+富通天下外贸erp:
+  dsl:
+    - "title('用户登录_富通天下外贸ERP')"
+
+小鱼易连云视讯管理平台:
+  dsl:
+    - "contains(body, 'font_1957344_lqkodjqdbl.css')"
+    - "contains(body, 'static_source/localcdn/webrtc/web/favicon.ico')"
+
+小黄豆crm:
+  dsl:
+    - "contains(body, 'xhdcrm')"
+    - "contains(body, 'JS/XHD.js')"
+    - "contains(body, 'login.check.xhd')"
+
+山石网科-防火墙:
+  dsl:
+    - "contains(body, 'Hillstone')"
+    - "contains(body, 'licenseAggrement')"
+    - "contains(body, 'GLOBAL_CONFIG.js')"
+
+山石网科云数据库审计与防护系统:
+  dsl:
+    - "contains(body, '#!/dbSummary')"
+    - "contains(body, '/lib/colResizable/')"
+
+广联达-glodon:
+  dsl:
+    - "contains(body, '/ConsoleCommon/Content/weebox.css')"
+    - "contains(body, '广联达')"
+
+广联达-广讯通:
+  dsl:
+    - "contains(body, 'gtp.standard')"
+    - "contains(body, 'JS/gxtAutoLogin.js')"
+
+康通电子云广播系统:
+  dsl:
+    - "contains(body, 'static/download/JSET99Setup.exe')"
+
+微三云管理系统:
+  dsl:
+    - "contains(body, 'WSY_logo')"
+    - "contains(body, '管理系统 MANAGEMENT SYSTEM')"
+
+微宏-oa:
+  dsl:
+    - "contains(body, 'wh/servlet/MainServer')"
+
+微擎-公众平台自助引擎:
+  dsl:
+    - "contains(body, '微擎 - 公众平台自助引擎')"
+    - "contains(body, 'www.w7.cc')"
+
+快云服务器小助手:
+  dsl:
+    - "title('快云服务器助手')"
+
+思迪数据池管理平台:
+  dsl:
+    - "contains(body, '思迪')"
+
+惠商管理系统:
+  dsl:
+    - "title('惠商+管理系统')"
+
+慧林信息安全管理系统:
+  dsl:
+    - "contains(body, '用户管理登录')"
+    - "contains(body, 'images/zh-CN/login_03.gif')"
+
+慧点科技-oa-协同办公系统:
+  dsl:
+    - "contains(body, '/dojo/smartdot/css/dojo_smartdot.css')"
+
+新软科技-极通ewebs:
+  dsl:
+    - "contains(body, 'N-soft')"
+    - "contains(body, 'ClientDownload.xgi')"
+
+方正翔宇:
+  dsl:
+    - "contains(body, 'e5style/login1.css')"
+    - "contains(body, 'e5workspace/security/captcha.do')"
+
+方配在线考试系统fpexam:
+  dsl:
+    - "contains(body, 'exam/logo/favicon.ico')"
+
+明源云-erp:
+  dsl:
+    - "contains(body, 'PubPlatform')"
+    - "contains(body, '明源云')"
+    - "contains(body, '#153290')"
+    - "contains(body, '明源软件')"
+
+易瑞授权访问系统:
+  dsl:
+    - "title('易瑞授权访问系统')"
+
+景云网络防病毒系统:
+  dsl:
+    - "contains_all(body, '防病毒','styles/images/logo.png')"
+
+智能表综合管理系统:
+  dsl:
+    - "contains(body, 'Ajax_Code/Login.ashx')"
+
+智跃hr人力资源管理系统:
+  dsl:
+    - "contains(body, 'images/ZY.LOGO.64.png')"
+
+智邦国际-企业管理软件:
+  dsl:
+    - "contains(body, 'update/exec.asp')"
+    - "contains(body, 'images/full.gif')"
+
+有waf:
+  dsl:
+    - "contains(header, 'WAF/')"
+
+朗拓健康医院管理系统:
+  dsl:
+    - "contains(body, 'static/mq/yaoxun_pbm_im.js')"
+
+朗新天霁人力资源管理系统:
+  dsl:
+    - "contains(body, 'hrsoft.com.cn')"
+    - "contains(body, 'chkLogindiv')"
+    - "contains(body, 'CustStyle')"
+
+朗驰欣创-视频监控:
+  dsl:
+    - "contains(body, 'Installplug.exe')"
+
+极通-ewebs-应用虚拟化:
+  dsl:
+    - "contains(body, 'NewSoft')"
+    - "contains(body, 'xajax05/xajax_js/xajax_core.js')"
+
+永中dcs:
+  dsl:
+    - "contains(body, '<title>永中文档在线预览DCS</title>')"
+    - "contains(body, 'www.yozodcs.com')"
+
+永中在线编辑软件系统:
+  dsl:
+    - "contains(body, 'Web Office')"
+    - "contains(body, 'img/eio.png')"
+
+泛微云桥-e-bridge:
+  dsl:
+    - "contains(body, 'wx.weaver')"
+    - "contains(body, 'e-Bridge')"
+
+浪潮服务器ipmi管理口:
+  dsl:
+    - "contains(body, 'img/inspur_logo.png')"
+
+海康威视-流媒体管理服务器:
+  dsl:
+    - "contains(body, '流媒体管理服务器')"
+    - "contains(body, 'MSHTML')"
+
+海康威视综合安防平台:
+  dsl:
+    - "contains(body, 'dist/jquery.js')"
+    - "contains(body, 'home/locationIndex.action')"
+
+海康威视联网网关:
+  dsl:
+    - "contains(body, '独立运行(无平台)')"
+    - "contains(body, 'login_form')"
+
+海纳cms-hituxcms:
+  dsl:
+    - "contains(body, 'Powered By HituxCMS')"
+    - "contains(body, 'ServiceCenter.js')"
+
+海翔d8药业云平台:
+  dsl:
+    - "title('登录海翔')"
+
+润申信息企业标准化管理系统:
+  dsl:
+    - "contains(body, '润申信息','企业标准化管理系统')"
+
+深信服-ngaf:
+  dsl:
+    - "contains(body, 'SANGFOR')"
+    - "contains(body, 'NGAF')"
+
+深信服web防篡改管理系统:
+  dsl:
+    - "contains(body, 'WEB防篡改')"
+    - "contains(body, 'cgi-bin/tamper_admin.cgi')"
+
+深信服一体化网关-mig:
+  dsl:
+    - "contains(body, 'cgi-bin/login.cgi')"
+    - "contains(body, '/html/wz_tooltip.js')"
+
+深信服安全感知平台:
+  dsl:
+    - "contains(body, '安全感知平台')"
+
+爱信诺开票服务器:
+  dsl:
+    - "contains(body, 'aisino.kps.console')"
+
+用友-畅捷通oem:
+  dsl:
+    - "contains(body, 'GNRemote.dll')"
+    - "contains(body, 'Web_sc/login.gn')"
+
+用友软件:
+  dsl:
+    - "contains(body, 'UFIDA Software CO.LTD all rights reserved')"
+
+电子申请客户端管理系统eac:
+  dsl:
+    - "contains(body, 'script/css/gwssi.css')"
+
+百度-ueditor编辑器:
+  dsl:
+    - "contains(body, 'ueditor.all.js')"
+    - "contains(body, 'UE.getEditor')"
+
+皓峰防火墙:
+  dsl:
+    - "title('皓峰防火墙系统登录')"
+
+碧海云盒:
+  dsl:
+    - "contains(body, '碧海云盒')"
+
+禾匠点企来客服系统:
+  dsl:
+    - "contains(body, 'const _scriptUrl')"
+
+科德电子智慧水务平台:
+  dsl:
+    - "contains(body, '山东科德电子有限公司')"
+    - "contains(body, 'J_LoginSub')"
+
+科脉蛙笑在线商业管理软件:
+  dsl:
+    - "contains(body, 'Kemai')"
+    - "contains(body, '科脉')"
+
+科荣-aio-运营管理系统:
+  dsl:
+    - "contains(body, 'style1/css/ListRange.css')"
+    - "contains(body, '主账套')"
+
+科迈-ras:
+  dsl:
+    - "contains(body, '科迈RAS')"
+    - "contains(body, 'CmxGoUrl.php')"
+
+移动云-waf:
+  dsl:
+    - "contains(header, 'CloudWAF')"
+
+移动云绿盟日志审计系统-log4j:
+  dsl:
+    - "contains(body, '/pisces/login/')"
+
+税控服务器管理系统:
+  dsl:
+    - "contains(body, 'resources/css/login_yzm.css')"
+
+管家婆全渠道业务同步中心:
+  dsl:
+    - "title('管家婆全渠道业务同步中心')"
+
+管理后台登录:
+  dsl:
+    - "contains_all(body, '管理','登录','login')"
+
+网动统一通信平台active-uc:
+  dsl:
+    - "title('网动统一通信平台(Active UC)')"
+
+网康科技互联网控制网关:
+  dsl:
+    - "title('网康科技·互联网控制网关')"
+
+网御-vpn:
+  dsl:
+    - "contains(body, '/vpn/common/js/leadsec.js')"
+    - "contains(body, '/vpn/user/common/custom/auth_home.css')"
+
+网御-安全网关:
+  dsl:
+    - "contains(body, '安全系统')"
+    - "contains(body, '网御星云')"
+
+网心云设备:
+  dsl:
+    - "contains(body, '网心云设备')"
+    - "contains(body, 'favicon.png')"
+
+网神secgate-3600防火墙:
+  dsl:
+    - "contains(body, '网神SecGate')"
+    - "contains(body, '3600防火墙')"
+    - "contains(body, 'css/lsec/login.css')"
+
+网神下一代极速防火墙:
+  dsl:
+    - "contains(body, '网神信息技术')"
+
+群晖-diskstation:
+  dsl:
+    - "contains(body, 'DiskStation')"
+    - "contains(body, '文件服务器')"
+
+群晖-nas:
+  dsl:
+    - "contains(body, 'Synology')"
+    - "contains(body, 'DiskStation')"
+    - "contains(body, 'NAS')"
+
+联软准入:
+  dsl:
+    - "contains(body, '网络准入')"
+    - "contains(body, 'leagsoft')"
+
+联达动力医院综合办公管理系统:
+  dsl:
+    - "contains(body, 'login.aspx?Method=AJAX&UserName=')"
+    - "contains(body, 'Login_Return_XML.aspx')"
+
+致梦科技-管家婆物联通:
+  dsl:
+    - "contains(body, 'HtmlPages/Vue/vue.js')"
+    - "contains(body, 'GetLoginValidate')"
+
+致远oa-m1-server:
+  dsl:
+    - "title('M1-Server')"
+
+致远oa-m3-server:
+  dsl:
+    - "title('M3 Server')"
+
+若依:
+  dsl:
+    - "contains(body, 'ruoyi')"
+    - "contains(body, '若依')"
+
+蓝凌-oa:
+  dsl:
+    - "contains(body, 'sys/ui/extend/theme/default/style/icon.css')"
+    - "contains(body, 'sys/ui/extend/theme/default/style/profile.css')"
+    - "contains(body, '蓝凌软件')"
+    - "contains(body, 'App_Themes/Login')"
+
+蓝凌eis智慧协同平台:
+  dsl:
+    - "contains(body, '/scripts/jquery.landray.common.js')"
+    - "contains(body, '蓝凌软件')"
+
+蓝盾防火墙:
+  dsl:
+    - "contains(body, '蓝盾')"
+    - "contains(body, 'Bluedon')"
+    - "contains(body, 'default/js/act/login.js')"
+
+迪普-sslvpn:
+  dsl:
+    - "contains(body, 'DPSSLVPN')"
+    - "contains(body, 'SSL VPN Service')"
+
+迪普vpn:
+  dsl:
+    - "contains(body, 'dptech_ssl')"
+    - "contains(body, 'loginAPI.js')"
+
+通用企业管理软件:
+  dsl:
+    - "contains(body, '/cwbase/web/Login.aspx')"
+
+金万维异速联:
+  dsl:
+    - "contains(body, 'GNRemote.dll?GNFunction=')"
+
+金合oa:
+  dsl:
+    - "contains(body, 'Jhsoft.Web.login')"
+    - "contains(body, 'PassWord.aspx')"
+
+金山timeon云杀毒:
+  dsl:
+    - "contains(body, '<title>TimeOn')"
+    - "contains(body, 'iepngfix/iepngfix_tilebg.js')"
+
+金山终端安全:
+  dsl:
+    - "contains(body, '终端安全系统')"
+    - "contains(body, 'setup/kanclient.exe')"
+    - "contains(body, 'iepngfix/iepngfix_tilebg.js')"
+
+金山终端安全管理系统:
+  dsl:
+    - "contains(body, 'iepngfix/iepngfix_tilebg.js')"
+    - "contains(body, 'mysqlStat')"
+
+金蝶-eas:
+  dsl:
+    - "contains(body, 'eassso')"
+    - "contains(body, 'portalClientHelper.jsp')"
+
+金蝶云星空:
+  dsl:
+    - "contains(body, 'HTML5/content/themes/kdcss.min.css')"
+    - "contains(body, '/ClientBin/Kingdee.BOS.XPF.App.xap')"
+
+银达汇智-智慧综合管理平台:
+  dsl:
+    - "contains(body, 'miniui')"
+    - "contains(body, 'Help ?')"
+    - "contains(body, 'main.aspx')"
+
+银达汇智智慧综合管理平台:
+  dsl:
+    - "contains(body, '福州银达云创信息科技有限公司')"
+    - "contains(body, 'miniui/crypto/CodeManage.js')"
+
+锐捷-sslvpn:
+  dsl:
+    - "contains(body, 'SSLVPN')"
+    - "contains(body, 'rjweb')"
+    - "contains(body, 'rjsslvpn_encookie')"
+
+锐捷交换机-睿易:
+  dsl:
+    - "contains(body, 'cgi-bin/luci')"
+    - "contains(body, '#f47f3e')"
+
+锐捷防火墙:
+  dsl:
+    - "contains(body, '下一代防火墙')"
+    - "contains(body, '锐捷网络')"
+
+阿姆瑞特智能dns:
+  dsl:
+    - "contains(body, 'main.php?mod=member')"
+
+阿里巴巴otter-manager:
+  dsl:
+    - "contains(body, 'Otter Manager')"
+    - "contains(body, 'channelList')"
+
+青年软件oa:
+  dsl:
+    - "contains(body, '/Content/qrlib/ligerUI/skins/')"
+
+青纺联物联查询平台:
+  dsl:
+    - "contains(body, '青纺联物联查询平台')"
+    - "contains(body, 'Themes/default/login.css')"
+
+顶讯科技-易宝oa系统:
+  dsl:
+    - "title('欢迎登录易宝OA系统')"
+
+飞鱼星上网行为管理:
+  dsl:
+    - "contains(body, 'css/R1Login.css')"
+    - "contains(body, 'share.ti_username')"
+
+飞鱼星路由器行为管理:
+  dsl:
+    - "contains(body, 'content=\"0.2;')"
+    - "contains(body, '/home/login.html')"
+
+骑士-74cms:
+  dsl:
+    - "contains(body, '74cms')"
+    - "contains(body, 'qscms.root')"
+
+齐治堡垒机:
+  dsl:
+    - "contains(body, 'fp_download')"
+    - "contains(body, 'logo-icon-ico72.png')"
