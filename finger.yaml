@@ -2153,11 +2153,6 @@ interlib电子资源馆外访问系统:
     - "contains(body, 'interlibSSO')"
     - "contains(body, 'cmdACT=ipLogin')"
 
-江苏叁拾叁OA:
-  dsl:
-    - "contains(body, '.modal-content')"
-    - "contains(body, '账号密码中包含sql关键字，请及时修改')"
-
 润乾报表:
   dsl:
     - "contains(body, 'demo/reportJsp/showReport.jsp')"
@@ -2312,10 +2307,11 @@ nexus-repository-manager:
   dsl:
     - "contains(body, '/resource/javascript/system/runtime.min.js')"
 
-acenet-驰崴防火墙:
+Citrix-Gateway:
   dsl:
-    - "contains(body, 'Technology')"
-    - "contains(body, 'login_commit.php')"
+    - "contains(body, 'Citrix Gateway</title>')"
+    - "contains(body, 'receiver/css/ctxs.no-js-ui.min.css')"
+    - "contains(body, '_ctxstxt_AddAll')"
 
 apache-airflow:
   dsl:
@@ -2456,14 +2452,8 @@ h3c-er3200-路由器:
     - "contains(body, 'home.asp')"
     - "contains(body, 'h3c.com')"
 
-h3c-er8300g2-x:
-  dsl:
-    - "contains(body, 'H3C')"
-    - "contains(body, 'vld.bmp')"
-    - "contains(body, 'dis_login')"
-    - "contains(body, 'ER8300G2')"
-
 h3c-web网管:
+  condition: and
   dsl:
     - "contains(body, 'webui')"
     - "contains(body, 'Web网管用户登录')"
@@ -2809,7 +2799,7 @@ yzmcms:
   dsl:
     - "contains_all(body, 'eYou','tpl/user')"
 
-任我行-crm:
+任我行crm:
   dsl:
     - "contains(body, '/Handlers/IdentifyingCode.ashx')"
 
@@ -2875,10 +2865,6 @@ yzmcms:
     - "contains(body, 'T9eHR-iconfont')"
     - "contains(body, 'Authentication/Login')"
 
-后台:
-  dsl:
-    - "title('后台')"
-
 向日葵-sunlogin:
   dsl:
     - "contains(body, '{\"success\":false,\"msg\":\"Verification failure\"}')"
@@ -2927,10 +2913,6 @@ yzmcms:
     - "contains(body, '大汉网络')"
     - "contains(body, 'hanweb.com' style='display:none')"
 
-天擎:
-  dsl:
-    - "contains(body, '天擎</title>')"
-
 天玥网络安全审计系统:
   dsl:
     - "contains(body, '天玥')"
@@ -2967,11 +2949,6 @@ yzmcms:
   dsl:
     - "contains(body, 'TopApp-AD')"
 
-天迈科技网络视频监控系统:
-  dsl:
-    - "contains(body, '天迈科技')"
-    - "contains(body, '网络视频监控系统')"
-
 好视通:
   dsl:
     - "contains_all(body, 'loginCheck.do','app.result')"
@@ -2985,11 +2962,6 @@ yzmcms:
   dsl:
     - "contains(body, 'am/ndkey.ico')"
     - "contains(body, 'zhLanguagePng')"
-
-安宁电子邮件系统anymacro-mail:
-  dsl:
-    - "contains(body, 'anymacro')"
-    - "contains(body, 'passre.php')"
 
 安恒云堡垒机:
   dsl:
@@ -3030,12 +3002,6 @@ yzmcms:
     - "contains(body, 'font_1957344_lqkodjqdbl.css')"
     - "contains(body, 'static_source/localcdn/webrtc/web/favicon.ico')"
 
-小黄豆crm:
-  dsl:
-    - "contains(body, 'xhdcrm')"
-    - "contains(body, 'JS/XHD.js')"
-    - "contains(body, 'login.check.xhd')"
-
 山石网科-防火墙:
   dsl:
     - "contains(body, 'Hillstone')"
@@ -3050,7 +3016,6 @@ yzmcms:
 广联达-glodon:
   dsl:
     - "contains(body, '/ConsoleCommon/Content/weebox.css')"
-    - "contains(body, '广联达')"
 
 广联达-广讯通:
   dsl:
@@ -3116,10 +3081,6 @@ yzmcms:
     - "contains(body, '明源云')"
     - "contains(body, '#153290')"
     - "contains(body, '明源软件')"
-
-易瑞授权访问系统:
-  dsl:
-    - "title('易瑞授权访问系统')"
 
 景云网络防病毒系统:
   dsl:
@@ -3319,11 +3280,6 @@ yzmcms:
     - "contains(body, '安全系统')"
     - "contains(body, '网御星云')"
 
-网心云设备:
-  dsl:
-    - "contains(body, '网心云设备')"
-    - "contains(body, 'favicon.png')"
-
 网神secgate-3600防火墙:
   dsl:
     - "contains(body, '网神SecGate')"
@@ -3339,7 +3295,8 @@ yzmcms:
     - "contains(body, 'DiskStation')"
     - "contains(body, '文件服务器')"
 
-群晖-nas:
+群晖nas:
+  condition: and
   dsl:
     - "contains(body, 'Synology')"
     - "contains(body, 'DiskStation')"
