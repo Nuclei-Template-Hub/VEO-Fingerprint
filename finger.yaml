@@ -112,10 +112,6 @@ aspnet-mvc:
   dsl:
     - "contains(body, 'asp.net mvc application</p>')"
 
-bt-control-pane:
-  dsl:
-    - "contains(body, '入口校验失败')"
-
 cisco-iox:
   dsl:
     - "contains(body, 'var g_url_version = \"/iox/api/v2\"')"
@@ -857,7 +853,6 @@ jnsh-system:
 joincheer-report:
   dsl:
     - "contains(body, '../netrep')"
-    - "contains(body, 'jqci')"
 
 joinf-erp:
   dsl:
@@ -1132,6 +1127,9 @@ shopxo:
 showdoc:
   dsl:
     - "contains(body, 'content=本网站基于开源版showdoc搭建')"
+    - "contains(body, '你可以使用Showdoc来编写在线API文档')"
+    - "contains(body, '<title>ShowDoc</title>')"
+    - "contains(body, 'showdoc/server/index.php')"
 
 siteserver:
   dsl:
@@ -1238,6 +1236,7 @@ yonyou-rmis:
   path: "/seeyon/main.do"
   dsl:
     - "contains(body, 'href=\"/seeyon/common/images/')"
+    - "contains(body, '/seeyon/common/')"
 
 yonyou-shop:
   dsl:
@@ -1289,10 +1288,6 @@ zzzcms:
     - "contains(body, 'images/hcm/themes/default')"
     - "contains(body, 'src=\"/general/sys/hjaxmanage.js\"')"
     - "contains(body, '宏景软件')"
-
-ssl-vpn:
-  dsl:
-    - "contains(body, '/por/login_psw.csp')"
 
 天清汉马USG:
   dsl:
@@ -1383,10 +1378,6 @@ rg-ew1200g:
   dsl:
     - "contains_all(body, '/static/img/title.ico','锐捷','/js/app')"
 
-seeyon:
-  dsl:
-    - "contains(body, '/seeyon/common/')"
-
 spring-env:
   dsl:
     - "contains(body, 'logback','systemEnvironment')"
@@ -1438,12 +1429,6 @@ secgate-3600:
     - "contains(body, '3600防火墙')"
     - "contains(body, 'css/lsec/login.css')"
 
-ruoyi:
-  dsl:
-    - "contains_all(body, 'ry-ui','username','rememberme')"
-    - "contains(body, 'ry-ui.css')"
-    - "contains(body, 'ry-ui.js')"
-
 aws-s3-bucket:
   dsl:
     - "contains_all(body, 'InvalidBucketName','aliyuncs')"
@@ -1489,6 +1474,8 @@ swagger-ui:
     - "contains(body, 'swagger-ui-standalone-preset.js')"
     - "contains(body, 'swagger-ui-bundle.js')"
     - "contains(body, 'Swagger UI')"
+    - "contains(body, 'SwaggerBootstrapUiIntroScript')"
+    - "contains(body, 'swaggerbootstrapui.css')"
 
 gsis:
   dsl:
@@ -1613,6 +1600,7 @@ jira:
 hadoop-applications:
   dsl:
     - "contains(body, '/cluster/app/application')"
+    - "contains(body, 'static/hadoop-st.png')"
 
 smartbi-insight:
   dsl:
@@ -1635,6 +1623,8 @@ big-ip:
 springboot:
   dsl:
     - "icon('/favicon.ico', '0488faca4c19046b94d07c3ee83cf9d6')"
+    - "contains(body, 'Whitelabel Error Page')"
+    - "contains(body, 'This application has no explicit mapping for')"
 
 alibaba-druid:
   dsl:
@@ -1663,11 +1653,6 @@ banggoo-adc:
 barracuda-spam-firewall:
   dsl:
     - "contains(body, 'http://www.barracudanetworks.com?a=bsf_product')"
-
-iis:
-  dsl:
-    - "contains(body, 'iisstart.png')"
-    - "contains(header, 'Microsoft-IIS/')"
 
 chart-js:
   dsl:
@@ -1904,11 +1889,6 @@ spe:
   dsl:
     - "icon('/favicon.ico', '7c7b66d305e9377fa1fce9f9a74464d9')"
 
-spring:
-  dsl:
-    - "icon('/favicon.ico', '0488faca4c19046b94d07c3ee83cf9d6')"
-
-
 woltlab-burning-board:
   dsl:
     - "icon('/favicon.ico', '1bf954ba2d568ec9771d35c94a6eb2dc')"
@@ -2018,6 +1998,10 @@ asp-net-api:
     - "contains(body, 'portal/ui/static/i18n')"
     - "contains(body, 'portal/ui/static/css')"
     - "contains(header, '/portal/')"
+    - "contains(body, 'home/locationIndex.action')"
+    - "contains(body, 'htmlDecode('智能物联感知平台'))"
+    - "contains(body, '/portal/conf/icon/logo.png')"
+    - "contains(body, '/v1/download/InstallRootCert.exe')"
 
 大华dss:
   dsl:
@@ -2132,14 +2116,6 @@ asp.net-viewstate:
   dsl:
     - "contains(body, 'id=\"__VIEWSTATE\" value=\"')"
 
-nginx:
-  dsl:
-    - "contains(header, 'nginx')"
-
-apache:
-  dsl:
-    - "contains(header, 'Apache')"
-
 jsessionid:
   dsl:
     - "contains(header, 'JSESSIONID=')"
@@ -2187,6 +2163,8 @@ minio:
   dsl:
     - "contains(body, '<title>MinIO Console</title>')"
     - "contains(body, 'background-wave-orig2.svg')"
+    - "contains(body, '/minio/loader.css')"
+    - "contains(body, '/minio/logo.svg')"
 
 zabbix:
   dsl:
@@ -2250,15 +2228,19 @@ shiro:
   dsl:
     - "contains(header, 'rememberMe=')"
     - "contains(header, '=deleteMe')"
+    - "contains(body, 'rememberme')"
 
 phpsessid:
   dsl:
-    - "contains(heder, 'PHPSESSID=')"
+    - "contains(header, 'PHPSESSID=')"
 
 thinkphp:
   dsl:
-    - "contains(heder, 'ThinkPHP')"
+    - "icon('/favicon.ico', 'f49c4a4bde1eec6c0b80c2277c76e3db')"
+    - "contains(header, 'ThinkPHP')"
+    - "contains(body, '为API开发设计的高性能框架')"
     - "contains(body, 'index.php?m=&c=index&')"
+    - "contains(body, '<h1>:(</h1>')"
 
 php:
   dsl:
@@ -2316,11 +2298,6 @@ Citrix-Gateway:
 apache-airflow:
   dsl:
     - "title('Airflow - Login')"
-
-apache-hadoop:
-  dsl:
-    - "contains(body, 'static/hadoop-st.png')"
-    - "contains(body, 'Cluster')"
 
 apache-shenyu:
   dsl:
@@ -2826,7 +2803,6 @@ yzmcms:
 
 华为ar-web管理平台:
   dsl:
-    - "contains(body, 'Huawei')"
     - "contains(body, 'simple/style/default/image/login.png')"
     - "contains(body, 'simple/view/ossn.html')"
 
@@ -2879,11 +2855,6 @@ yzmcms:
     - "contains(body, 'cover_admin.css')"
     - "contains(body, 'SSLVPN LOGIN')"
 
-启迪国信-uem管理平台:
-  dsl:
-    - "contains(body, '#commonTip')"
-    - "contains(body, 'wwLogin')"
-
 和欣控制hysine-webtalk-系统:
   dsl:
     - "contains(body, '_webtalk/_cur/loginA.php')"
@@ -2891,9 +2862,7 @@ yzmcms:
 
 品德科技医学在线考试系统:
   dsl:
-    - "contains(body, '考试系统')"
-    - "contains(body, '品德')"
-    - "contains(body, 'login.aspx')"
+    - "contains_all(body, '考试系统','品德')"
 
 唯德科创-ipeasy-知易通:
   dsl:
@@ -2932,9 +2901,6 @@ yzmcms:
 天融信vpn:
   dsl:
     - "contains(header, 'topsecsvportalstyle')"
-
-天融信vpn设备:
-  dsl:
     - "contains(header, 'topsecsvportalname')"
 
 天融信web应用安全防护系统:
@@ -2981,7 +2947,7 @@ yzmcms:
     - "contains(body, '人力资源信息管理系统')"
     - "contains(body, 'hrlogon')"
 
-宝塔-btcn:
+宝塔:
   dsl:
     - "contains(body, '入口校验失败')"
     - "contains(body, '<title>恭喜，站点创建成功')"
@@ -3111,8 +3077,7 @@ yzmcms:
 朗新天霁人力资源管理系统:
   dsl:
     - "contains(body, 'hrsoft.com.cn')"
-    - "contains(body, 'chkLogindiv')"
-    - "contains(body, 'CustStyle')"
+    - "contains_all(body, 'chkLogindiv','CustStyle')"
 
 朗驰欣创-视频监控:
   dsl:
@@ -3145,17 +3110,10 @@ yzmcms:
 海康威视-流媒体管理服务器:
   dsl:
     - "contains(body, '流媒体管理服务器')"
-    - "contains(body, 'MSHTML')"
-
-海康威视综合安防平台:
-  dsl:
-    - "contains(body, 'dist/jquery.js')"
-    - "contains(body, 'home/locationIndex.action')"
 
 海康威视联网网关:
   dsl:
     - "contains(body, '独立运行(无平台)')"
-    - "contains(body, 'login_form')"
 
 海纳cms-hituxcms:
   dsl:
@@ -3170,17 +3128,16 @@ yzmcms:
   dsl:
     - "contains(body, '润申信息','企业标准化管理系统')"
 
-深信服-ngaf:
+深信服ngaf:
   dsl:
-    - "contains(body, 'SANGFOR')"
-    - "contains(body, 'NGAF')"
+    - "contains_all(body, 'SANGFOR','NGAF')"
 
 深信服web防篡改管理系统:
   dsl:
     - "contains(body, 'WEB防篡改')"
     - "contains(body, 'cgi-bin/tamper_admin.cgi')"
 
-深信服一体化网关-mig:
+深信服SSLVPN:
   dsl:
     - "contains(body, 'cgi-bin/login.cgi')"
     - "contains(body, '/html/wz_tooltip.js')"
@@ -3230,8 +3187,7 @@ yzmcms:
 
 科脉蛙笑在线商业管理软件:
   dsl:
-    - "contains(body, 'Kemai')"
-    - "contains(body, '科脉')"
+    - "contains_all(body, 'Kemai','科脉')"
 
 科荣-aio-运营管理系统:
   dsl:
@@ -3330,6 +3286,9 @@ yzmcms:
   dsl:
     - "contains(body, 'ruoyi')"
     - "contains(body, '若依')"
+    - "contains_all(body, 'ry-ui','username','rememberme')"
+    - "contains(body, 'ry-ui.css')"
+    - "contains(body, 'ry-ui.js')"
 
 蓝凌-oa:
   dsl:
@@ -3345,7 +3304,6 @@ yzmcms:
 
 蓝盾防火墙:
   dsl:
-    - "contains(body, '蓝盾')"
     - "contains(body, 'Bluedon')"
     - "contains(body, 'default/js/act/login.js')"
 
@@ -3429,11 +3387,6 @@ yzmcms:
   dsl:
     - "contains(body, 'main.php?mod=member')"
 
-阿里巴巴otter-manager:
-  dsl:
-    - "contains(body, 'Otter Manager')"
-    - "contains(body, 'channelList')"
-
 青年软件oa:
   dsl:
     - "contains(body, '/Content/qrlib/ligerUI/skins/')"
@@ -3466,3 +3419,29 @@ yzmcms:
   dsl:
     - "contains(body, 'fp_download')"
     - "contains(body, 'logo-icon-ico72.png')"
+
+中科汇联-easysite:
+  dsl:
+    - "contains(body, 'easysite')"
+    - "contains(body, 'easysiteHiddenDiv')"
+    - "contains(body, 'Huilan')"
+    - "contains(body, 'huilan-jquery-ui')"
+
+layui:
+  dsl:
+    - "contains(body, 'layui/layui.js')"
+
+springboot-actuator:
+  dsl:
+    - "contains_all(body, '_links','self','actuator')"
+
+api-docs:
+  dsl:
+    - "contains_all(body, 'swagger','info','basePath','paths')"
+
+山东先森网络:
+  dsl:
+    - "contains(body, 'xiansen_logo.png')"
+    - "contains(body, '山东先森网络科技有限公司提供技术支持')"
+    - "contains(body, 'images/login_btn.gif')"
+    - "contains(url, '/zhqw/')"
