@@ -82,9 +82,9 @@ complex-rule:
 
 ## 基础函数详解
 
-### 1. contains() - 内容包含检查
+### 1. contains() - 内容包含检查，多个内容则为OR检测逻辑
 
-**用法**：`contains(source, "text")`
+**用法**：`contains(source, "text","text1","text2")`
 
 **支持的source**：
 
