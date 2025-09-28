@@ -3441,7 +3441,5 @@ api-docs:
 
 山东先森网络:
   dsl:
-    - "contains(body, 'xiansen_logo.png')"
-    - "contains(body, '山东先森网络科技有限公司提供技术支持')"
-    - "contains(body, 'images/login_btn.gif')"
+    - "contains(body, 'xiansen_logo.png','山东先森网络科技有限公司提供技术支持','images/login_btn.gif')"
     - "contains(url, '/zhqw/')"
