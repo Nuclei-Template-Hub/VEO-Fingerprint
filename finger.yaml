@@ -56,10 +56,6 @@ apache-mesos:
   dsl:
     - "contains(body, '<img src=\"/static/img/mesos_logo.png\" alt=\"apache mesos\">')"
 
-apache-nifi:
-  dsl:
-    - "contains(body, '<a href=\"/nifi/\">/nifi</a>')"
-
 apache-ofbiz:
   dsl:
     - "contains(body, '<span>Powered by OFBiz</span>')"
@@ -174,14 +170,6 @@ cnpower-oa:
   dsl:
     - "contains(body, '/oaapp/webobjects/oaapp.woa')"
 
-colasoft-network-information-comprehensive-detection-and-processing-platform:
-  dsl:
-    - "contains(body, '科来网络信息综合检测处理平台')"
-
-collaborative-management-platform:
-  dsl:
-    - "contains(body, '/web/submitlogon2.do ')"
-
 confluence:
   dsl:
     - "contains(body, 'id=\"com-atlassian-confluence')"
@@ -190,18 +178,6 @@ confluence:
 conftool:
   dsl:
     - "contains(body, \"<a href='http://www.conftool.net'>conference management software\")"
-
-conking-schoolgroup:
-  dsl:
-    - "contains(body, 'vcxvcxv')"
-
-consul-hashicorp:
-  dsl:
-    - "contains(body, 'www.consul.io')"
-
-contentxxl:
-  dsl:
-    - "contains(body, 'content=\"contentxxl')"
 
 cool-admin:
   dsl:
@@ -269,21 +245,9 @@ diaowen-system:
   dsl:
     - "contains(body, 'powered by <a href=\"http://www.dwsurvey.net\" style=')"
 
-differsoft-itsystem:
-  dsl:
-    - "contains(body, 'name=\"tbzcode\"')"
-
 discuz:
   dsl:
     - "contains(body, 'powered by <strong><a href=\"http://www.discuz.net')"
-
-disqus:
-  dsl:
-    - "contains(body, 'disqus_thread')"
-
-distributed-regtech-collaboration-platform:
-  dsl:
-    - "contains(body, '<span class=\"blue bolder\">drc</span>')"
 
 diyou-p2p:
   dsl:
@@ -317,21 +281,9 @@ dokuwiki:
   dsl:
     - "icon('/favicon.ico', '3ef81fad2a3deaeb19f02c9cf67ed8eb')"
 
-dolphinscheduler:
-  dsl:
-    - "contains(body, '<title>dolphinscheduler</title>')"
-
 dotclear:
   dsl:
     - "contains(body, 'powered by <a href=\"http://dotclear.org/')"
-
-dotproject:
-  dsl:
-    - "contains(body, '/images/dp_icon.gif')"
-
-drrui-cloud-office-system:
-  dsl:
-    - "contains(body, '/user/toupdatepasswordpage.di')"
 
 drugpak:
   dsl:
@@ -356,10 +308,6 @@ dsview:
 dtcloud:
   dsl:
     - "icon('/favicon.ico', '49fe0618acdcd7c9dc443faca20d7bd9')"
-
-dts-operation-platform:
-  dsl:
-    - "contains(body, \"window.appname = 'alidts';\")"
 
 dvwa:
   dsl:
@@ -416,7 +364,6 @@ ebrigade-erp:
 ecash-system:
   dsl:
     - "contains(body, '<br>欢迎使用e-cash系统')"
-
 
 泛微ecology/emobile:
   dsl:
@@ -537,7 +484,6 @@ fortinet-sslvpn:
   dsl:
     - "contains(body, '/sslvpn/portal.html')"
     - "contains(body, 'fgt_lang')"
-
 
 geoserver:
   dsl:
@@ -674,18 +620,6 @@ hikiwiki:
   dsl:
     - "contains(body, 'by <a href=\"http://hikiwiki.org/')"
 
-hikvision-bigdatadiagnosis:
-  dsl:
-    - "contains(body, '大数据诊断工具</strong>')"
-
-hikvision-cloudvideo:
-  dsl:
-    - "contains(body, '嗨看云视频</p>')"
-
-hikvision-intelligentsafeguardsystems:
-  dsl:
-    - "contains(body, 'window.location.href.indexof(\"/index/carfile/\"')"
-
 hikvision:
   dsl:
     - "icon('/favicon.ico', '89b932fcc47cf4ca3faadb0cfdef89cf')"
@@ -737,10 +671,6 @@ ipcop-firewall:
 ipec-ipms:
   dsl:
     - "contains(body, '/login/lpec/qrcode.html')"
-
-ipeer:
-  dsl:
-    - "contains(body, '/css/ipeer.css')"
 
 ipswitch-imailserver:
   dsl:
@@ -887,21 +817,9 @@ jumpserver-fortres-machine:
     - "contains(body, '<input type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"密码\" required=\"\">')"
     - "contains(body, 'csrfmiddlewaretoken')"
 
-juniper-hdr:
-  dsl:
-    - "contains(body, '/hdr_logo.gif')"
-
 jupyter-notebook:
   dsl:
     - "contains(body, '<div id=\"ipython_notebook\" class=\"nav navbar-brand\">')"
-
-jurassic-application-management-system:
-  dsl:
-    - "contains(body, 'jurassic')"
-
-jxt-consulting:
-  dsl:
-    - "contains(body, 'powered by jxt consulting')"
 
 jymusic:
   dsl:
@@ -3447,3 +3365,7 @@ api-docs:
 WebServiceWeb服务:
   dsl:
     - "contains(body, 'WebService.asmx?WSDL','microsoft.com/webservices')"
+
+1111管理系统:
+  dsl:
+    - "contains(body, '<title>Object moved</title>')"
