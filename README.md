@@ -1,6 +1,6 @@
 # AdventureX 指纹规则编写指南
 
-## 📋 目录
+## 目录
 
 - [什么是指纹规则](#什么是指纹规则)
 - [规则文件格式](#规则文件格式)
@@ -415,13 +415,13 @@ discuz:
 ### 1. 规则命名规范
 
 ```yaml
-# ✅ 好的命名
+# 好的命名
 apache-httpd:
 wordpress-cms:
 nginx-proxy:
 mysql-database:
 
-# ❌ 避免的命名
+# 避免命名
 web:
 app:
 test:
@@ -450,7 +450,7 @@ specific-version:
 ### 3. 合理使用主动探测
 
 ```yaml
-# ✅ 适合主动探测的场景
+# 适合主动探测的场景
 robots-check:
   path: "/robots.txt"
   dsl:
@@ -461,7 +461,7 @@ version-info:
   dsl:
     - "contains(body, 'version')"
 
-# ❌ 不建议的主动探测
+# 不建议的主动探测
 homepage:
   path: "/"  # 首页通常已被被动扫描覆盖
   dsl:
@@ -471,17 +471,17 @@ homepage:
 ### 4. 性能优化建议
 
 ```yaml
-# ✅ 高效的规则
+# 高效的规则
 quick-check:
   dsl:
     - "contains(header, 'Server: Apache')"  # 检查响应头比检查body更快
 
-# ✅ 具体的匹配
+# 具体的匹配
 specific-match:
   dsl:
     - "contains(body, 'wp-content/themes')"  # 具体的字符串匹配
 
-# ❌ 性能较差的规则
+# 性能较差的规则
 slow-check:
   dsl:
     - "regex(body, '.*wordpress.*')"  # 过于宽泛的正则表达式
@@ -526,14 +526,14 @@ INFO fingerprint: 🎯 http://target.com <rule-name> <matched-dsl>
 3. **条件设置**：检查`condition`字段设置是否正确
 
 ```yaml
-# ❌ 可能有问题的规则
+# 可能有问题的规则
 wrong-rule:
   condition: and  # 要求所有条件都满足
   dsl:
     - "contains(body, 'WordPress')"
     - "contains(body, 'Drupal')"  # 不可能同时是WordPress和Drupal
 
-# ✅ 修正后的规则
+# 修正后的规则
 cms-detection:
   condition: or  # 任意一个匹配即可
   dsl:
@@ -550,13 +550,13 @@ cms-detection:
 3. **合理设置条件**：避免不必要的`and`条件
 
 ```yaml
-# ✅ 高性能规则
+# 高性能规则
 fast-rule:
   dsl:
     - "server('nginx')"  # 响应头检查很快
     - "status_code == 200"  # 状态码检查很快
 
-# ❌ 性能较差的规则
+# 性能较差的规则
 slow-rule:
   dsl:
     - "regex(body, '.*very.*complex.*pattern.*')"  # 复杂正则很慢
@@ -588,18 +588,3 @@ api-check:
   dsl:
     - "contains(body, 'version')"
 ```
-
----
-
-## 📝 总结
-
-指纹规则编写是一门平衡艺术，需要在准确性、性能和可维护性之间找到平衡点。通过掌握DSL语法、理解匹配机制、遵循最佳实践，你可以编写出高效准确的指纹规则。
-
-**记住核心原则**：
-
-- 🎯 **准确性第一** - 确保规则匹配正确的技术
-- ⚡ **性能考虑** - 优先使用高效的匹配方式
-- 🔧 **易于维护** - 使用清晰的命名和适当的分类
-- 📊 **充分测试** - 在实际环境中验证规则效果
-
-希望这份指南能帮助你快速上手AdventureX指纹规则编写！ 
