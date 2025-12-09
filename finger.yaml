@@ -1795,12 +1795,6 @@ unibox:
     - "contains(body, 'ldapHosts[i]')"
     - "contains(body, '/fort/login')"
 
-资管云:
-  dsl:
-    - "contains(body, 'adminfront/login/')"
-    - "contains(url, 'adminfront/login/')"
-    - "contains(body, 'progid:DXImageTransform.Microsoft.AlphaImageLoader')"
-
 用友bip:
   dsl:
     - "contains(body, 'iuap-apcom-workbench')"
