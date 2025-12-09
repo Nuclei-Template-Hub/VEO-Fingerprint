@@ -1,3 +1,5 @@
+# Version: 2025/12/09
+
 apache-activemq:
   dsl:
     - "contains(body, '<title>Apache ActiveMQ</title>')"
@@ -64,10 +66,6 @@ apache-oozie-web-console:
   dsl:
     - "contains(body, 'href=\"/oozie\">oozie console')"
 
-apache-shiro:
-  dsl:
-    - "contains(body, '</i> shiro</li>')"
-
 apache-skywalking:
   dsl:
     - "contains(body, \"sorry but SkyWalking doesn't work\")"
@@ -107,6 +105,8 @@ aspcms:
 aspnet-mvc:
   dsl:
     - "contains(body, 'asp.net mvc application</p>')"
+    - "contains(header, 'ASP.NET_SessionId','ASP.NET','AspNetMvc')"
+
 
 cisco-iox:
   dsl:
@@ -192,10 +192,6 @@ cpanel:
     - "contains(body, 'cpanel_magic_revision')"
     - "contains(body, 'go.cpanel.net')"
 
-d-link:
-  dsl:
-    - "icon('/favicon.ico', '107579220745d3b21461c23024d6c4a3')"
-
 dahua-wpms:
   dsl:
     - "contains(body, '<li id=\"DSS-help\">')"
@@ -241,17 +237,9 @@ diancms:
   dsl:
     - "contains(body, 'diancms_用户登陆引用')"
 
-diaowen-system:
-  dsl:
-    - "contains(body, 'powered by <a href=\"http://www.dwsurvey.net\" style=')"
-
 discuz:
   dsl:
     - "contains(body, 'powered by <strong><a href=\"http://www.discuz.net')"
-
-diyou-p2p:
-  dsl:
-    - "contains(body, 'src=\"/dyweb/dythemes')"
 
 django:
   dsl:
@@ -277,10 +265,6 @@ document-security-management-system:
   dsl:
     - "contains(body, 'src=\"/drm/encjs/barrett.js\"')"
 
-dokuwiki:
-  dsl:
-    - "icon('/favicon.ico', '3ef81fad2a3deaeb19f02c9cf67ed8eb')"
-
 dotclear:
   dsl:
     - "contains(body, 'powered by <a href=\"http://dotclear.org/')"
@@ -292,10 +276,6 @@ drugpak:
 drupal:
   dsl:
     - "contains(body, '/sites/all/themes/')"
-
-drwebantivirus:
-  dsl:
-    - "contains(body, '/avdesk/includes/system/templates/images/logo_en.png')"
 
 dspace:
   dsl:
@@ -316,10 +296,6 @@ dvwa:
 dzzoffice-product:
   dsl:
     - "contains(body, 'misc.php?mod=sendmail')"
-
-e-plugger-srm:
-  dsl:
-    - "contains(body, '科研管理系统，北京易普拉格科技')"
 
 e-soonlink:
   dsl:
@@ -361,10 +337,6 @@ ebrigade-erp:
   dsl:
     - "contains(body, \"class='btn btn-ebrigade btn-lg'\")"
 
-ecash-system:
-  dsl:
-    - "contains(body, '<br>欢迎使用e-cash系统')"
-
 泛微ecology/emobile:
   dsl:
     - "contains(body, 'window.apiprifix = \"/emp\";')"
@@ -399,17 +371,13 @@ f5-big-ip:
   dsl:
     - "contains(body, 'content=\"F5 Networks, Inc.\"')"
 
-facemeeting-meeting:
+飞视美会议:
   dsl:
     - "contains(body, 'class=\"subnav\">飞视美</div>')"
 
 falcon:
   dsl:
     - "contains(body, 'textarea class=\"form-control endpoints')"
-
-falipu-iot:
-  dsl:
-    - "contains(body, 'id=\"t1\">安全、稳定、安全</div>')"
 
 fangmail:
   dsl:
@@ -436,7 +404,9 @@ faqrobot:
     - "contains(body, '南京云问网络技术有限公司')"
 
 fastadmin-framework:
-  path: "/assets/img/error.svg"
+  path:
+   - "/assets/img/error.svg"
+   - "/static/common/img/error.svg"
   dsl:
     - "contains(body, '<desc>Created with Sketch.</desc>')"
     - "contains(body, 'fastadmin')"
@@ -486,8 +456,13 @@ fortinet-sslvpn:
     - "contains(body, 'fgt_lang')"
 
 geoserver:
+  path:
+    - "/geoserver/web/"
+    - "/IMEE-GlobeServer/"
   dsl:
-    - "contains(body, 'class=\"geoserver lebeg')"
+    - "contains(body, 'class=\"geoserver lebeg','GeoServerBasePage','_spring_security_remember_me','navigation-tab-content plain')"
+    - "contains(body,'geosolutions')"
+    - "contains(header, './?0')"
 
 geotrust-cert:
   dsl:
@@ -558,10 +533,6 @@ h3c-web:
     - "contains(body, 'Web网管用户登录')"
     - "contains(body, 'china_logo.jpg')"
 
-h3c:
-  dsl:
-    - "contains(body, 'service@h3c.com')"
-
 h3cer3200:
   dsl:
     - "contains(body, 'ER3200')"
@@ -631,14 +602,6 @@ huawei-jump-server:
     - "contains(body, 'value=pluginLoaded')"
     - "icon('/favicon.ico', '1f2d27250647de902d396b75d9a2b0cf')"
 
-infosec-utrust:
-  dsl:
-    - "contains(body, 'china utrust infortech co,.ltd')"
-
-infowarelab-system-management-center:
-  dsl:
-    - "contains(body, '<div class=\"main_supporterbar\">')"
-
 inspinia:
   dsl:
     - "contains(body, 'inspinia')"
@@ -650,10 +613,6 @@ inspur-ec-government-approval-platform:
 inspur-incloud-sphere:
   dsl:
     - "contains(body, 'class=\"easyui-layout')"
-
-invision-ipboard:
-  dsl:
-    - "contains(body, 'ipb.vars')"
 
 invision-powerboard:
   dsl:
@@ -726,15 +685,19 @@ jboss-eap:
 
 jeecgboot:
   dsl:
-    - "contains(body, 'jeecg-boot')"
-    - "contains(body, 'polyfill_')"
-    - "contains(body, 'casPrefixUrl')"
+    - "contains(body, 'jeecg-boot','polyfill_','casPrefixUrl','load_title')"
+    - "contains_all(body, 'absolute','9999999999999','#FFF','Open Sans','load_title')"
 
 jeecms:
   dsl:
     - "contains(body, 'loginController.do')"
     - "contains(url, 'cgformSqlController')"
     - "contains(url, 'loginController.do')"
+
+jeesite:
+  dsl:
+    - "contains(body,'userfiles/2')"
+    - "contains(header, 'jeesite.')"
 
 jeewms:
   dsl:
@@ -979,10 +942,6 @@ ruijie-smart-web:
   dsl:
     - "contains(body, '锐捷交换机')"
 
-ruijie:
-  dsl:
-    - "contains(body, '4008 111 000')"
-
 深信服上网行为管理:
   dsl:
     - "contains(body, 'class=\"info-inner\"')"
@@ -1025,10 +984,6 @@ sangfor-tamper-resistance:
 sangfor-vd:
   dsl:
     - "contains_all(body, 'login_psw.csp','VDI')"
-
-seafile:
-  dsl:
-    - "contains(body, 'seafile')"
 
 serv-u-ftp:
   dsl:
@@ -1255,23 +1210,14 @@ csmail:
   dsl:
     - "contains(body, '<frame src=\"/mainframe_zh-cn.html\" />')"
 
-erp:
-  dsl:
-    - "icon('/favicon.ico', 'c68b15c45cf80115a943772f7d0028a6')"
-
 yozodcs:
   dsl:
     - "contains(body, '<title>永中文档在线预览DCS</title>')"
     - "contains(body, 'www.yozodcs.com')"
 
-waf:
-  dsl:
-    - "contains(body, 'Redirect to...')"
-    - "contains(body, '/LogInOut.php')"
-
 深信服atrust:
   dsl:
-    - "contains(body, 'isClient = /atrusttray')"
+    - "contains(body, 'isClient = /atrusttray','atrusttray','web/tray.html?page=error_network','_handlePageError, true')"
     - "contains(body, 'window.allModuleLoadSuccess')"
 
 金山企业安全终端防护优化系统:
@@ -1296,7 +1242,7 @@ rg-ew1200g:
   dsl:
     - "contains_all(body, '/static/img/title.ico','锐捷','/js/app')"
 
-spring-env:
+springboot-env:
   dsl:
     - "contains(body, 'logback','systemEnvironment')"
 
@@ -1331,7 +1277,6 @@ bt-cn:
 inspur-ipmi:
   dsl:
     - "contains(body, 'img/inspur_logo.png')"
-    - "contains(body, 'Management System')"
 
 tomcat:
   dsl:
@@ -1376,8 +1321,7 @@ exchange:
 
 druid:
   dsl:
-    - "contains(body, 'Druid Stat Index')"
-    - "contains(body, 'druid.login.unamecr')"
+    - "contains(body, 'Druid Stat Index','druid.login.unamecr','druid.login')"
 
 activemq:
   dsl:
@@ -1543,10 +1487,6 @@ springboot:
     - "icon('/favicon.ico', '0488faca4c19046b94d07c3ee83cf9d6')"
     - "contains(body, 'Whitelabel Error Page')"
     - "contains(body, 'This application has no explicit mapping for')"
-
-alibaba-druid:
-  dsl:
-    - "contains(body, 'druid.index.init')"
 
 360-ngfw:
   dsl:
@@ -1829,7 +1769,7 @@ ueditor-jsp:
     - "contains(body, 'imageActionName')"
     - "contains(body, 'imageFieldName')"
 
-ueditor-net:
+ueditor:
   dsl:
     - "contains(body, 'ueditor')"
 
@@ -1907,7 +1847,7 @@ asp-net-api:
 
 章管家:
   dsl:
-    - "contains(body, '/web/setcookie/i18n.htm')"
+    - "contains(body, '/web/setcookie/i18n.htm','章管家登录','章管家,印章管理','i18nparse')"
 
 海康威视综合安防:
   dsl:
@@ -1948,12 +1888,12 @@ REALOR瑞友天翼虚拟化系统:
 
 kkfileview:
   dsl:
-    - "contains(body, 'kkview.cn')"
+    - "contains(body, 'kkview.cn','09ZHSXbsQ','kkFileView','上传的文件不能超过500MB喔！！！','daxiao.replace')"
     - "contains(body, 'theme-showcase')"
 
 阿里云waf:
   dsl:
-    - "contains(body, 'block_traceid_tips')"
+    - "contains(body, 'block_traceid_tips','errors.aliyun.com/images/','g.alicdn.com/sd-base/')"
 
 metacrm:
   dsl:
@@ -1962,6 +1902,7 @@ metacrm:
 bladex:
   dsl:
     - "contains(body, 'svg/loading-spin.svg')"
+    - "contains(url, 'blade-auth')"
     - "contains(body, 'bladex')"
     - "icon('/favicon.png', '952438bb6af042855ed192384032e37b')"
 
@@ -2030,6 +1971,7 @@ casdoor:
     - "contains(body, 'images/yiyaoshi.png')"
     - "contains(body, '全程云')"
     - "contains(body, 'location.href='/oa/'')"
+
 asp.net-viewstate:
   dsl:
     - "contains(body, 'id=\"__VIEWSTATE\" value=\"')"
@@ -2046,9 +1988,12 @@ interlib电子资源馆外访问系统:
     - "contains(body, 'cmdACT=ipLogin')"
 
 润乾报表:
+  path: "/InputServlet?action=13"
   dsl:
     - "contains(body, 'demo/reportJsp/showReport.jsp')"
     - "contains(body, 'dashboard/dashboard.rpx')"
+    - "contains(body, 'ServletException','NullPointerException')"
+    - "contains(body, 'alert(null)')"
 
 超图软件SuperMap-iServer:
   dsl:
@@ -2078,24 +2023,23 @@ nacos:
     - "contains(body, 'console-ui/public/img/favicon.ico')"
 
 minio:
+  path: "/minio"
   dsl:
-    - "contains(body, '<title>MinIO Console</title>')"
-    - "contains(body, 'background-wave-orig2.svg')"
+    - "contains(body, 'MinIO Console','Minio Browser')"
+    - "contains(body, 'background-wave-orig2.svg','currentUiVersion')"
     - "contains(body, '/minio/loader.css')"
     - "contains(body, '/minio/logo.svg')"
+    - "contains(header, 'Minio')"
 
 zabbix:
   dsl:
     - "contains_all(body, 'zabbix','Zabbix SIA')"
 
-列目录:
-  dsl:
-    - "contains(body, 'Index of /')"
-
 禅道:
   dsl:
     - "contains(header, 'zentaosid')"
-    - "contains(body, '/theme/default/images/main/zt-logo.png')"
+    - "contains(body, '/theme/default/images/main/zt-logo.png','#zentaomax','#zentaobiz')"
+    - "contains(url, 'zentao/user')"
 
 启明星辰天清汉马USG防火墙:
   dsl:
@@ -2146,18 +2090,20 @@ shiro:
   dsl:
     - "contains(header, 'rememberMe=')"
     - "contains(header, '=deleteMe')"
-    - "contains(body, 'rememberme')"
+    - "contains(body, 'rememberme=')"
+    - "contains(body, '</i> shiro</li>')"
 
 phpsessid:
   dsl:
     - "contains(header, 'PHPSESSID=')"
 
 thinkphp:
+  path: "/?a=WKtwuea&c=2RVM&m=fv3C&s=ba5a"
   dsl:
     - "icon('/favicon.ico', 'f49c4a4bde1eec6c0b80c2277c76e3db')"
     - "contains(header, 'ThinkPHP')"
     - "contains(body, '为API开发设计的高性能框架')"
-    - "contains(body, 'index.php?m=&c=index&')"
+    - "contains(body, 'index.php?m=&c=index&','www.thinkphp.cn','Fast & Simple OOP PHP Framework','<h3>TRACE</h3>','<title>系统发生错误</title>')"
     - "contains(body, '<h1>:(</h1>')"
 
 php:
@@ -2199,10 +2145,6 @@ nexus-repository-manager:
     - "contains(body, 'Powered by <b>4images')"
     - "contains(body, '4homepages')"
 
-53bk数字报刊系统:
-  dsl:
-    - "contains(body, '/Comja/')"
-
 78-oa:
   dsl:
     - "contains(body, '/resource/javascript/system/runtime.min.js')"
@@ -2236,11 +2178,6 @@ apache2-ubuntu-默认页:
 canal-admin:
   dsl:
     - "contains(body, 'Canal Admin')"
-
-cas-单点登录:
-  dsl:
-    - "contains(body, 'Central Authentication Service')"
-    - "contains(body, 'cas/login')"
 
 centos-默认页面:
   dsl:
@@ -2298,11 +2235,6 @@ emlog:
 enesys:
   dsl:
     - "contains(body, 'dwr/interface/WebContextUtil.js')"
-
-entercrm:
-  dsl:
-    - "contains(body, '杭州恩软')"
-    - "contains(body, 'Ent.base.js')"
 
 epoint政务服务系统:
   dsl:
@@ -2566,19 +2498,6 @@ tamronos-iptv系统:
     - "contains(body, 'TamronOS')"
     - "contains(body, 'tamronos.com')"
 
-teleport-堡垒机:
-  dsl:
-    - "contains(body, 'TELEPORT')"
-    - "contains(body, 'login-account')"
-    - "contains(body, 'login-type-oath')"
-
-tencent-exmail:
-  dsl:
-    - "contains(header, 'ssl_edition=mail.qq.com')"
-    - "contains(body, 'cgi-bin/getinvestigate?flowid=')"
-    - "contains(body, 'cgi-bin/bizmail_portal')"
-
-
 turbomail-邮件系统:
   dsl:
     - "contains(body, 'TurboMail')"
@@ -2745,10 +2664,6 @@ yzmcms:
   dsl:
     - "contains(body, '/SouthUIContent/themes/easydropdown.css')"
 
-博华网龙信息安全一体机:
-  dsl:
-    - "title('博华网龙信息安全一体机')"
-
 厦门快普:
   dsl:
     - "contains(body, 'jKPM6')"
@@ -2867,15 +2782,7 @@ yzmcms:
 
 宝塔:
   dsl:
-    - "contains(body, '入口校验失败')"
-    - "contains(body, '<title>恭喜，站点创建成功')"
-    - "contains(body, '面板系统后台')"
-    - "contains(body, '系统自动生成')"
-    - "contains(body, '扫码登录更安全')"
-    - "contains(body, 'bt.cn')"
-    - "contains(body, '站点创建成功')"
-    - "contains(body, '宝塔')"
-    - "contains(body, '宝塔Linux面板')"
+    - "contains(body, '入口校验失败','您没有将此域名或IP绑定到对应站点!','<title>恭喜，站点创建成功','面板系统后台','系统自动生成','您的请求在Web服务器中没有找到对应的站点','站点创建成功','宝塔Linux面板')"
 
 富通天下外贸erp:
   dsl:
@@ -2886,10 +2793,10 @@ yzmcms:
     - "contains(body, 'font_1957344_lqkodjqdbl.css')"
     - "contains(body, 'static_source/localcdn/webrtc/web/favicon.ico')"
 
-山石网科-防火墙:
+山石网科产品:
   dsl:
     - "contains(body, 'Hillstone')"
-    - "contains(body, 'licenseAggrement')"
+    - "contains(body, 'licenseAggrement','title>Secure Connect')"
     - "contains(body, 'GLOBAL_CONFIG.js')"
 
 山石网科云数据库审计与防护系统:
@@ -2899,7 +2806,7 @@ yzmcms:
 
 广联达-glodon:
   dsl:
-    - "contains(body, '/ConsoleCommon/Content/weebox.css')"
+    - "contains(body, '/ConsoleCommon/Content/weebox.css','JS/DD_belatedPNG.js','/Services/Identification/login.ashx')"
 
 广联达-广讯通:
   dsl:
@@ -2913,7 +2820,6 @@ yzmcms:
 微三云管理系统:
   dsl:
     - "contains(body, 'WSY_logo')"
-    - "contains(body, '管理系统 MANAGEMENT SYSTEM')"
 
 微宏-oa:
   dsl:
@@ -2984,7 +2890,7 @@ yzmcms:
     - "contains(body, 'update/exec.asp')"
     - "contains(body, 'images/full.gif')"
 
-有waf:
+waf:
   dsl:
     - "contains(header, 'WAF/')"
 
@@ -3068,10 +2974,11 @@ yzmcms:
   dsl:
     - "contains(body, 'aisino.kps.console')"
 
-用友-畅捷通oem:
+用友-畅捷通:
   dsl:
     - "contains(body, 'GNRemote.dll')"
     - "contains(body, 'Web_sc/login.gn')"
+    - "contains(body, '/tplus/view/login.html','location='/tplus/'','divAuthBeforeWatchCertificate')"
 
 用友软件:
   dsl:
@@ -3085,14 +2992,6 @@ yzmcms:
   dsl:
     - "contains(body, 'ueditor.all.js')"
     - "contains(body, 'UE.getEditor')"
-
-皓峰防火墙:
-  dsl:
-    - "title('皓峰防火墙系统登录')"
-
-碧海云盒:
-  dsl:
-    - "contains(body, '碧海云盒')"
 
 禾匠点企来客服系统:
   dsl:
@@ -3129,17 +3028,9 @@ yzmcms:
   dsl:
     - "contains(body, 'resources/css/login_yzm.css')"
 
-管家婆全渠道业务同步中心:
-  dsl:
-    - "title('管家婆全渠道业务同步中心')"
-
 管理后台登录:
   dsl:
     - "contains_all(body, '管理','登录','login')"
-
-网动统一通信平台active-uc:
-  dsl:
-    - "title('网动统一通信平台(Active UC)')"
 
 网康科技互联网控制网关:
   dsl:
@@ -3204,16 +3095,10 @@ yzmcms:
   dsl:
     - "contains(body, 'ruoyi')"
     - "contains(body, '若依')"
+    - "icon('/favicon.ico','4eeb8a8eb30b70af511dcc28c11a3216')"
     - "contains_all(body, 'ry-ui','username','rememberme')"
     - "contains(body, 'ry-ui.css')"
     - "contains(body, 'ry-ui.js')"
-
-蓝凌-oa:
-  dsl:
-    - "contains(body, 'sys/ui/extend/theme/default/style/icon.css')"
-    - "contains(body, 'sys/ui/extend/theme/default/style/profile.css')"
-    - "contains(body, '蓝凌软件')"
-    - "contains(body, 'App_Themes/Login')"
 
 蓝凌eis智慧协同平台:
   dsl:
@@ -3255,14 +3140,8 @@ yzmcms:
 
 金山终端安全:
   dsl:
-    - "contains(body, '终端安全系统')"
     - "contains(body, 'setup/kanclient.exe')"
     - "contains(body, 'iepngfix/iepngfix_tilebg.js')"
-
-金山终端安全管理系统:
-  dsl:
-    - "contains(body, 'iepngfix/iepngfix_tilebg.js')"
-    - "contains(body, 'mysqlStat')"
 
 金蝶-eas:
   dsl:
@@ -3318,16 +3197,6 @@ yzmcms:
   dsl:
     - "title('欢迎登录易宝OA系统')"
 
-飞鱼星上网行为管理:
-  dsl:
-    - "contains(body, 'css/R1Login.css')"
-    - "contains(body, 'share.ti_username')"
-
-飞鱼星路由器行为管理:
-  dsl:
-    - "contains(body, 'content=\"0.2;')"
-    - "contains(body, '/home/login.html')"
-
 骑士-74cms:
   dsl:
     - "contains(body, '74cms')"
@@ -3349,23 +3218,126 @@ layui:
   dsl:
     - "contains(body, 'layui/layui.js')"
 
-springboot-actuator:
-  dsl:
-    - "contains_all(body, '_links','self','actuator')"
-
 api-docs:
   dsl:
-    - "contains_all(body, 'swagger','info','basePath','paths')"
+    - "contains_all(body, 'swagger','info','paths')"
+    - "contains_all(body, 'openapi','info','paths')"
 
-山东先森网络:
-  dsl:
-    - "contains(body, 'xiansen_logo.png','山东先森网络科技有限公司提供技术支持','images/login_btn.gif')"
-    - "contains(url, '/zhqw/')"
-
-WebServiceWeb服务:
+WebService服务:
   dsl:
     - "contains(body, 'WebService.asmx?WSDL','microsoft.com/webservices')"
 
-1111管理系统:
+Zimbra邮件管理系统:
   dsl:
-    - "contains(body, '<title>Object moved</title>')"
+    - "title('Zimbra 网络客户端登录')"
+    - "contains(body, 'class=\"ScreenReaderOnly','ZLoginWhatsThisAnchor','ZLoginUnsupported')"
+
+浙大恩特客户资源管理系统:
+  dsl:
+    - "contains(body, 'entsoft_en','LoginDoAction.entcrm','杭州恩软','Ent.base.js')"
+
+指挥调度平台:
+  dsl:
+    - "contains(body, '执法视音频综合管理平台','PMedia Platform Software','index.php?r=site/login','app/structure/departments.php','指挥调度管理平台')"
+
+H3C-iMC智能管理中心:
+  dsl:
+    - "contains(body, '/selfservice/preregister','mainForm:ifCheckCode','loginRegisterContent','/selfservice/index.xhtml')"
+
+ureport:
+  path:
+    - "/ureport/designer"
+  dsl:
+    - "contains_all(body, 'ureport','ureport-asserts')"
+    - "contains(body, 'window._server=\"/ureport\"')"
+
+群杰印章物联网管理平台:
+  path: "/ureport/designer"
+  dsl:
+    - "icon('/favicon.ico', '8d51bc407f98aa7b6919dda75b6da5f4')"
+
+维保保:
+  dsl:
+    - "title('维保保')"
+    - "contains(body, 'upload/login/logo.png','user/goChangePasswordNew.do','plugins/wbb/RSA.js')"
+
+knife4j-doc:
+  dsl:
+    - "contains(body, 'We're sorry but knife4j-vue','knife4j-vue')"
+
+海康威视运行管理中心:
+  dsl:
+    - "contains(body, 'tree_main_business@bic_a','tree_main_component@bic','common_picture')"
+    - "icon('/center/static/favicon.ico', 'e05b47d5ce11d2f4182a964255870b76')"
+
+C-Lodop打印服务系统:
+  dsl:
+    - "contains(body, '欢迎使用C-Lodop打印服务系统','CLodopfuncs.js','demoCreateCLodopJSscript')"
+
+惠普打印机:
+  dsl:
+    - "contains(body, 'HP LaserJet','info_deviceStatus.htm')"
+
+Portainer:
+  dsl:
+  - "title('Portainer面板')"
+  - "contains(body, 'portainer.updatePassword','portainer.init.admin','images/logo_alt.png')"
+
+h3c网管系统:
+  dsl:
+  - "contains(body, 'customdir/images/china_logo.jpg','WnmIsLoginDescSupported')"
+
+安恒明御WAF:
+  dsl:
+  - "contains_all(body, '权限问题或行为非法，您的访问被拒绝','Request')"
+
+
+ArcGIS:
+  dsl:
+  - "contains(body, 'arcgismanager','dojo/dojo/dojo.js')"
+  - "contains(header, 'arcgis')"
+
+阿里云OSS:
+  dsl:
+  - "contains_all(body, 'RequestId','Message','HostId','EC')"
+
+新点OA:
+  dsl:
+  - "contains(body, '新点政务','epoint')"
+
+next.js:
+  dsl:
+  - "contains(body, '/_next/static/chunks/app/','/_next/','window._next_f')"
+
+React Server:
+  dsl:
+  - "contains(body, 'React.createElement','react.production.min.js')"
+
+疑似文件上传表单:
+  dsl:
+  - "contains(body, 'enctype=\"multipart/form-data\"','input type=\"file\"','placeholder=\"请选择文件\"')"
+  - "contains(body, '请选择文件','选择多文件','选择文件','UploadFile')"
+
+
+SOAP:
+  dsl:
+  - "contains(body, 'soapenv:Envelope','soapenv:Body','soap-env:envelope','soap-env:Body')"
+
+springboot-actuator:
+  dsl:
+  - "contains_all(body, '_links','self','href')"
+
+智能客流大数据平台:
+  tags: red,fileupload
+  dsl:
+  - "contains(body, '智能客流大数据平台','img/dl/login_logo.png','login_l_img')"
+
+PPGo_Job管理后台:
+  tags: red,infoleak,high
+  dsl:
+  - "contains(body, 'PPGo_Job管理后台','icon: 2,shade:0.3,time:1000')"
+
+spring-gateway:
+  tags: red,rce,critical
+  dsl:
+  - "contains_all(body, 'gateway','\"href\":','templated')"
