@@ -1,4 +1,4 @@
-# version: 1.0.2
+# version: 1.0.3
 
 apache-activemq:
   dsl:
@@ -107,35 +107,6 @@ aspnet-mvc:
     - "contains(body, 'asp.net mvc application</p>')"
     - "contains(header, 'ASP.NET_SessionId','ASP.NET','AspNetMvc')"
 
-
-cisco-iox:
-  dsl:
-    - "contains(body, 'var g_url_version = \"/iox/api/v2\"')"
-
-cisco-webex:
-  dsl:
-    - "contains(body, 'alt=\"cisco webex meetings server\"')"
-
-ciscovpn:
-  dsl:
-    - "contains(body, '/+CSCOE+/logon.html')"
-
-citadel-servers:
-  dsl:
-    - "contains(body, '<div class=\"boxlabel\">citadel server - powered by')"
-
-citec-system:
-  dsl:
-    - "contains(body, '正在使用腾讯qq帐号登录消防联网系统')"
-
-citrix-metaframe:
-  dsl:
-    - "contains(body, 'window.location=\"/Citrix/MetaFrame')"
-
-citrix-receiver:
-  dsl:
-    - "contains(body, 'upgradeavailable-already-installed-separator bar-separator')"
-
 citrix-xcp:
   dsl:
     - "contains(body, '<p/>citrix systems, inc. xcp 1.6.10')"
@@ -153,18 +124,6 @@ cmspro:
   dsl:
     - "contains(body, '开普互联')"
     - "contains(body, 'CMS内容管理系统')"
-
-cmstuan:
-  dsl:
-    - "contains(body, 'content=\"开源团主机管理系统')"
-
-cndatacom-smsp:
-  dsl:
-    - "contains(body, '/smrc/resources/default/')"
-
-cnoa-oa:
-  dsl:
-    - "contains(body, 'powered by cnoa.cn')"
 
 cnpower-oa:
   dsl:
@@ -213,10 +172,6 @@ dbshop:
   dsl:
     - "contains(body, 'content=\"dbshop')"
 
-dcn:
-  dsl:
-    - "contains(body, 'dcfos web management')"
-
 dedecms:
   dsl:
     - "contains(body, '<div><h3>dedecms error warning!</h3>')"
@@ -233,10 +188,6 @@ dian-diagnostics:
   dsl:
     - "contains(body, 'src=\"/resources/pages/img/logo.svg\"')"
 
-diancms:
-  dsl:
-    - "contains(body, 'diancms_用户登陆引用')"
-
 discuz:
   dsl:
     - "contains(body, 'powered by <strong><a href=\"http://www.discuz.net')"
@@ -252,22 +203,6 @@ dnp-firewall:
 docebolms:
   dsl:
     - "contains(body, 'powered by docebo')"
-
-doclever:
-  dsl:
-    - "contains(body, '@click.prevent=\"login\" :loading=\"loginpending\"')"
-
-docmail-cwindow:
-  dsl:
-    - "contains(body, '<a href=\"http://www.docmail.cn\" target=\"_blank\">')"
-
-document-security-management-system:
-  dsl:
-    - "contains(body, 'src=\"/drm/encjs/barrett.js\"')"
-
-dotclear:
-  dsl:
-    - "contains(body, 'powered by <a href=\"http://dotclear.org/')"
 
 drugpak:
   dsl:
@@ -375,22 +310,6 @@ f5-big-ip:
   dsl:
     - "contains(body, 'class=\"subnav\">飞视美</div>')"
 
-falcon:
-  dsl:
-    - "contains(body, 'textarea class=\"form-control endpoints')"
-
-fangmail:
-  dsl:
-    - "contains(body, '/fangmail/cgi/index.cgi')"
-
-fangpage-exam:
-  dsl:
-    - "contains(body, '/sites/exam/statics/css/login.css')"
-
-fanpusoft-construction-work-oa:
-  dsl:
-    - "contains(body, '/dwr/interface/loginservice.js')"
-
 fanwe:
   dsl:
     - "contains(body, 'index.php?ctl=article_cate')"
@@ -398,10 +317,6 @@ fanwe:
 faq-manager:
   dsl:
     - "contains(body, '<a href=\"admin/\">admin area</a></td></tr></table></body></html>')"
-
-faqrobot:
-  dsl:
-    - "contains(body, '南京云问网络技术有限公司')"
 
 fastadmin-framework:
   path:
@@ -424,10 +339,6 @@ fit2cloud-jumpserver:
     - "contains(body, 'pathname.startsWith('/core')"
     - "contains(body, 'JumpServer 开源堡垒机')"
     - "contains(body, 'core/auth/password/forget/previewing')"
-
-flower-celery-monitoring-tool:
-  dsl:
-    - "contains(body, '<a class=\"brand\" href=\"/\">flower</a>')"
 
 forsun:
   dsl:
@@ -548,26 +459,6 @@ hadoop-administration:
 hadoop-hue:
   dsl:
     - "contains(body, 'hue and the hue logo are trademarks of cloudera, inc.')"
-
-haidaoshop:
-  dsl:
-    - "contains(body, 'haidao.web.general.js')"
-
-haitian-oa:
-  dsl:
-    - "contains(body, 'mshtml 8.00.6001.19298')"
-
-hanmasoft:
-  dsl:
-    - "contains(body, 'content=\"汉码软件')"
-
-hanming-video-conferencing:
-  dsl:
-    - "contains(body, '/resources/fmweb/other/js/login.js')"
-
-hanna-drawing-service:
-  dsl:
-    - "contains(body, 'hanna图纸服务')"
 
 hanweb-system:
   dsl:
@@ -759,10 +650,6 @@ jspxcms:
   dsl:
     - "contains(body, 'Powered by Jspxcms')"
 
-jstorm:
-  dsl:
-    - "contains(body, 'content=\"jstorm')"
-
 jsyhit-system:
   dsl:
     - "contains(body, 'content=\"仪化产品质量查询系统\"')"
@@ -872,18 +759,6 @@ qax-secfox:
     - "contains(body, 'type=application/x-xtx-axhost')"
     - "icon('/favicon.ico', 'f3147f50cfd23455cb5fdf0dcd890dac')"
 
-qax-useso:
-  dsl:
-    - "contains(body, 'libs.useso.com')"
-
-qianxing-oa:
-  dsl:
-    - "contains(body, 'count/mystat.asp')"
-
-qm-system:
-  dsl:
-    - "contains(body, 'src=\"polyfills.js')"
-
 qz-safe-mail:
   dsl:
     - "contains(body, '/qzmail/index.php')"
@@ -950,10 +825,6 @@ sangfor-branch-business-center:
   dsl:
     - "contains(body, \"location.href = '/bbc/index'\")"
 
-sangfor-employee-internet-management:
-  dsl:
-    - "contains(body, 'internet authentication system')"
-
 sangfor-ipsec-vpn:
   dsl:
     - "contains(body, 'sangfor-ipsec')"
@@ -976,10 +847,6 @@ sangfor-sip:
     - "contains(body, '<alias>')"
     - "contains(body, '<version>')"
     - "contains(body, 'portal/jssdk/api')"
-
-sangfor-tamper-resistance:
-  dsl:
-    - "contains(body, 'href=\"tamper/style/control.css\"')"
 
 sangfor-vd:
   dsl:
@@ -1169,11 +1036,6 @@ zzzcms:
 lansecs:
   dsl:
     - "contains(body, 'lansecs第二代防火墙')"
-
-vpn:
-  dsl:
-    - "contains(body, '/vpn/common/js/leadsec.js')"
-    - "contains(body, '/vpn/user/common/custom/auth_home.css')"
 
 topidp:
   dsl:
@@ -1715,10 +1577,6 @@ secworld-vpn:
   dsl:
     - "contains(body, 'secworld')"
 
-semcms:
-  dsl:
-    - "contains(body, 'powered by <a href=\"http://www.sem-cms.com\"')"
-
 sidao-oa:
   dsl:
     - "contains(body, '思道OA')"
@@ -2154,10 +2012,6 @@ Citrix-Gateway:
     - "contains(body, 'Citrix Gateway</title>')"
     - "contains(body, 'receiver/css/ctxs.no-js-ui.min.css')"
     - "contains(body, '_ctxstxt_AddAll')"
-
-apache-airflow:
-  dsl:
-    - "title('Airflow - Login')"
 
 apache-shenyu:
   dsl:
@@ -2829,14 +2683,6 @@ yzmcms:
   dsl:
     - "contains(body, '微擎 - 公众平台自助引擎')"
     - "contains(body, 'www.w7.cc')"
-
-快云服务器小助手:
-  dsl:
-    - "title('快云服务器助手')"
-
-思迪数据池管理平台:
-  dsl:
-    - "contains(body, '思迪')"
 
 惠商管理系统:
   dsl:
