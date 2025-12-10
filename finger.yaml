@@ -671,10 +671,6 @@ jupyter-notebook:
   dsl:
     - "contains(body, '<div id=\"ipython_notebook\" class=\"nav navbar-brand\">')"
 
-jymusic:
-  dsl:
-    - "contains(body, 'public/static/libs/jymusic/css')"
-
 kafka-manager:
   dsl:
     - "contains(body, 'vassets/images/2af62f58ee2baf495c9b3a9a1c30ce03-favicon.png')"
@@ -912,10 +908,6 @@ vmware-vrealize-operations-manager:
 vmware-vsphere:
   dsl:
     - "contains(body, 'VMware vSphere')"
-
-xinnet-mail:
-  dsl:
-    - "contains(body, 'cssv2/tamail.css')"
 
 xstream:
   dsl:
@@ -1568,10 +1560,6 @@ schneider-quantum-140noe77101:
 secworld-firewall:
   dsl:
     - "contains(body, 'var __permission = \"网神secgate3600 防火墙\"')"
-
-secworld-secips:
-  dsl:
-    - "contains(body, '网神')"
 
 secworld-vpn:
   dsl:
@@ -2550,18 +2538,12 @@ yzmcms:
 
 天玥网络安全审计系统:
   dsl:
-    - "contains(body, '天玥')"
-    - "contains(body, 'venustech')"
+    - "contains_all(body, '天玥','venustech')"
 
 天融信-上网行为管理系统:
   dsl:
     - "contains(body, 'dkey_activex_download.php')"
     - "contains(body, 'login_commit.php')"
-
-天融信topapp负载均衡系统:
-  dsl:
-    - "contains(body, 'TopAPP负载均衡系统')"
-    - "contains(body, '天融信')"
 
 天融信vpn:
   dsl:
@@ -2863,10 +2845,6 @@ waf:
     - "contains(body, '3600防火墙')"
     - "contains(body, 'css/lsec/login.css')"
 
-网神下一代极速防火墙:
-  dsl:
-    - "contains(body, '网神信息技术')"
-
 群晖-diskstation:
   dsl:
     - "contains(body, 'DiskStation')"
@@ -2977,9 +2955,7 @@ waf:
 
 锐捷-sslvpn:
   dsl:
-    - "contains(body, 'SSLVPN')"
-    - "contains(body, 'rjweb')"
-    - "contains(body, 'rjsslvpn_encookie')"
+    - "contains(body, 'rjweb','rjsslvpn_encookie')"
 
 锐捷交换机-睿易:
   dsl:
@@ -3149,6 +3125,15 @@ PPGo_Job管理后台:
   - "contains(body, 'PPGo_Job管理后台','icon: 2,shade:0.3,time:1000')"
 
 spring-gateway:
-  tags: red,rce,critical
+  tags: red,rce,critical,spring,spring-gateway
   dsl:
   - "contains_all(body, 'gateway','\"href\":','templated')"
+
+东方通TongWeb:
+  path: 
+    - "/ejbserver/ejb"
+    - "/console/"
+  tags: red,rce,critical,tongweb
+  dsl:
+  - "contains(body, 'TongWeb','东方通科技股份有限公司','console/verCode','console/rest/i18n?locale')"
+  - "contains(header, 'TongWeb')"
