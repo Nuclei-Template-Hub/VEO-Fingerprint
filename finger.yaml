@@ -782,7 +782,7 @@ rmihttpserver:
 
 rocketmq-console:
   dsl:
-    - "contains(body, '<title>RocketMq-console-ng</title>')"
+    - "contains(body, 'RocketMQ Dashboard','vendor/preLoading/modernizr-')"
 
 ruijie-cloud:
   dsl:
@@ -3105,7 +3105,6 @@ React Server:
   - "contains(body, 'enctype=\"multipart/form-data\"','input type=\"file\"','placeholder=\"请选择文件\"')"
   - "contains(body, '请选择文件','选择多文件','选择文件','UploadFile')"
 
-
 SOAP:
   dsl:
   - "contains(body, 'soapenv:Envelope','soapenv:Body','soap-env:envelope','soap-env:Body')"
@@ -3137,3 +3136,7 @@ spring-gateway:
   dsl:
   - "contains(body, 'TongWeb','东方通科技股份有限公司','console/verCode','console/rest/i18n?locale')"
   - "contains(header, 'TongWeb')"
+
+华为防火墙:
+  dsl:
+  - "contains(body, 'UI_component/ctrl/Button.js','UI_component/ctrl/PanelSuperclass.js')"
