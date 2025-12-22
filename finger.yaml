@@ -1,4 +1,4 @@
-# version: 1.0.4
+# version: 1.0.5
 
 apache-activemq:
   dsl:
@@ -576,8 +576,9 @@ jboss-eap:
 
 jeecgboot:
   dsl:
-    - "contains(body, 'jeecg-boot','polyfill_','casPrefixUrl','load_title')"
+    - "contains(body,'.app-loading','.app-loading-title','.app-loading-wrap')"
     - "contains_all(body, 'absolute','9999999999999','#FFF','Open Sans','load_title')"
+    - "icon('/favicon.ico', '599637f95d6a1c0208bf41d8ff72f364')"
 
 jeecms:
   dsl:
@@ -1318,10 +1319,10 @@ hadoop-applications:
     - "contains(body, '/cluster/app/application')"
     - "contains(body, 'static/hadoop-st.png')"
 
-smartbi-insight:
+smartbi:
   dsl:
-    - "contains(body, 'smartbi.gcf.gcfutil')"
-    - "contains(body, 'writeCustomBgImg.jsp')"
+    - "contains(url,'vision/index.jsp')"
+    - "contains(body, 'smartbi.gcf.gcfutil','QueryView_is_hybrid','writeCustomBgImg')"
 
 hfs:
   dsl:
@@ -1615,7 +1616,7 @@ ueditor-jsp:
     - "contains(body, 'imageActionName')"
     - "contains(body, 'imageFieldName')"
 
-ueditor:
+ueditor组件:
   dsl:
     - "contains(body, 'ueditor')"
 
