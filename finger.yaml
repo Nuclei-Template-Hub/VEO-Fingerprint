@@ -1,4 +1,4 @@
-# version: 1.0.5
+# version: 1.0.6
 
 apache-activemq:
   dsl:
@@ -133,18 +133,7 @@ confluence:
   dsl:
     - "contains(body, 'id=\"com-atlassian-confluence')"
     - "contains(body, 'name=\"confluence-base-url\"')"
-
-conftool:
-  dsl:
-    - "contains(body, \"<a href='http://www.conftool.net'>conference management software\")"
-
-cool-admin:
-  dsl:
-    - "contains(body, 'cool-admin')"
-
-coreshop:
-  dsl:
-    - "contains(body, 'coreshop')"
+    - "icon('/favicon.ico', 'bad2c1f96cd66e70b4aa119e7270cc62')"
 
 cpanel:
   dsl:
@@ -176,18 +165,6 @@ dedecms:
   dsl:
     - "contains(body, '<div><h3>dedecms error warning!</h3>')"
 
-dejavu:
-  dsl:
-    - "contains(body, 'Dejavu, the missing Web UI for Elasticsearch')"
-
-dhc-oa:
-  dsl:
-    - "contains(body, 'src=\"/extcomponent/security/image/dhc.png\"')"
-
-dian-diagnostics:
-  dsl:
-    - "contains(body, 'src=\"/resources/pages/img/logo.svg\"')"
-
 discuz:
   dsl:
     - "contains(body, 'powered by <strong><a href=\"http://www.discuz.net')"
@@ -212,14 +189,6 @@ drupal:
   dsl:
     - "contains(body, '/sites/all/themes/')"
 
-dspace:
-  dsl:
-    - "contains(body, '<a href=\"http://www.dspace.org\">dspace software')"
-
-dsview:
-  dsl:
-    - "contains(body, 'href=\"/dsview/themes/')"
-
 dtcloud:
   dsl:
     - "icon('/favicon.ico', '49fe0618acdcd7c9dc443faca20d7bd9')"
@@ -235,18 +204,6 @@ dzzoffice-product:
 e-soonlink:
   dsl:
     - "contains(body, '志高易联')"
-
-eagleeye:
-  dsl:
-    - "contains(body, 'eagleeye 钉钉答疑群')"
-
-east-simulation-account:
-  dsl:
-    - "contains(body, 'src=\"/scripts/eastsimutility.js\"')"
-
-east-simulation-nettrmp:
-  dsl:
-    - "contains(body, 'nettrmp登录界面')"
 
 easted-ecloud:
   dsl:
@@ -278,10 +235,6 @@ ebrigade-erp:
     - "icon('/favicon.ico', '41eca7a9245394106a09b2534d8030df')"
     - "icon('/favicon.ico', '281348dd57383c1f214ffb8aed3a1210')"
 
-泛微eoffice:
-  dsl:
-    - "contains(body, 'szfeatures')"
-
 泛微云桥:
   dsl:
     - "contains(body, 'content=\"泛微云桥e-bridge\"')"
@@ -309,14 +262,6 @@ f5-big-ip:
 飞视美会议:
   dsl:
     - "contains(body, 'class=\"subnav\">飞视美</div>')"
-
-fanwe:
-  dsl:
-    - "contains(body, 'index.php?ctl=article_cate')"
-
-faq-manager:
-  dsl:
-    - "contains(body, '<a href=\"admin/\">admin area</a></td></tr></table></body></html>')"
 
 fastadmin-framework:
   path:
@@ -352,6 +297,7 @@ fortinet-firewall:
   dsl:
     - "contains(body, 'fortitoken')"
     - "contains(body, 'str_table.mail_token_msg')"
+    - "icon('/favicon.ico', 'e462005902f81094ab3de44e4381de19')"
 
 fortinet-fortigate:
   dsl:
@@ -394,6 +340,7 @@ gitea:
 gitlab:
   dsl:
     - "icon('/favicon.ico', '85c754581e1d4b628be5b7712c042224')"
+    - "icon('/favicon.ico', 'f7e3d97f404e71d302b3239eef48d5f2')"
     - "contains(body, 'is_gitlab_team_member')"
     - "contains(header,'x-gitlab-meta')"
     - "contains(body, 'assets/gitlab_logo')"
@@ -577,8 +524,8 @@ jboss-eap:
 jeecgboot:
   dsl:
     - "contains(body,'.app-loading','.app-loading-title','.app-loading-wrap')"
-    - "contains_all(body, 'absolute','9999999999999','#FFF','Open Sans','load_title')"
-    - "icon('/favicon.ico', '599637f95d6a1c0208bf41d8ff72f364')"
+    - "contains(body, 'jeecg-boot','casPrefixUrl')"
+    # - "contains_all(body, 'absolute','9999999999999','#FFF','Open Sans','load_title')"
 
 jeecms:
   dsl:
@@ -602,8 +549,10 @@ jellyfin:
     - "contains(body, 'content=\"http://jellyfin.org\"')"
 
 jenkins:
+  path: "/jenkins/"
   dsl:
-    - "contains(body, 'Jenkins')"
+    - "contains(body, '/jenkins/static/','jenkins-button')"
+    - "icon('/favicon.ico', '23e8c7bd78e8cd826c5a6073b15068b1')"
 
 jetty:
   dsl:
@@ -883,6 +832,7 @@ vmware-esxi:
 vmware-horizon:
   dsl:
     - "contains(body, 'alt=\"vmware horizon\">')"
+    - "icon('/favicon.ico', 'c6acedaff906029fc5455d9ec52c7f42')"
 
 vmware-server-2:
   dsl:
@@ -926,6 +876,7 @@ yearning:
 yii-framework:
   dsl:
     - "contains(body, 'yii_csrf_token')"
+    - "icon('/favicon.ico', 'a976d227e5d1dcf62f5f7e623211dd1b')"
 
 ymhome-oa:
   dsl:
@@ -1118,10 +1069,6 @@ h3c-router:
   dsl:
     - "contains(body, '/wnm/ssl/web/frame/login.html')"
 
-bt-cn:
-  dsl:
-    - "contains(body, '宝塔Linux面板')"
-
 用友nc:
   tags: oa,yonyou,u8cloud
   dsl:
@@ -1313,6 +1260,7 @@ h3c-er2100:
 jira:
   dsl:
     - "contains(body, 'jira.webresources')"
+    - "icon('/favicon.ico', '88717398db158e3330ce94fc1784e4a7')"
 
 hadoop-applications:
   dsl:
@@ -1324,18 +1272,17 @@ smartbi:
     - "contains(url,'vision/index.jsp')"
     - "contains(body, 'smartbi.gcf.gcfutil','QueryView_is_hybrid','writeCustomBgImg')"
 
-hfs:
+hfs文件服务器:
   dsl:
     - "contains(body, 'href=\"http://www.rejetto.com/hfs/')"
 
-cms:
+cms系统:
   dsl:
     - "contains(body, 'Powered by .*CMS')"
 
 big-ip:
   dsl:
     - "icon('/favicon.ico', '04d9541338e525258daf47cc844d59f3')"
-
 
 springboot:
   dsl:
@@ -1355,15 +1302,11 @@ springboot:
   dsl:
     - "contains(body, 'src=\"/static/img/skyeye-logo-big.png\">')"
 
-baidu-jiasule:
-  dsl:
-    - "contains(body, 'static.jiasule.com/static/js/http_error.js')"
-
 banggoo-adc:
   dsl:
     - "contains(body, '欢迎登录banggoo adc管理界面</div>')"
 
-barracuda-spam-firewall:
+梭子鱼防火墙:
   dsl:
     - "contains(body, 'http://www.barracudanetworks.com?a=bsf_product')"
 
@@ -1396,14 +1339,13 @@ eyou-mail-system:
     - "contains(body, 'var loginssl = document.form_login.login_ssl.value;')"
 
 帆软数据决策系统:
-  path: "/webroot/decision/login"
+  path: 
+    - "/webroot/decision/login"
+    - "/decision/login"
   dsl:
     - "contains(body, 'ReportServe\\?op=fs')"
+    - "contains(header, 'webroot/decision')"
     - "contains(body, '/com/fr/web/resources')"
-
-gadspot-nc1000-l10:
-  dsl:
-    - "contains(body, '<nobr>video server')"
 
 gpon-home-gateway:
   dsl:
@@ -1468,18 +1410,6 @@ huawei-ism:
 huawei-security-device:
   dsl:
     - "contains(body, 'sweb-internal/plat/login/login_new.js')"
-
-huawei-server:
-  dsl:
-    - "contains(body, 'control/images/about.gif')"
-
-huawei-tecal-e6000:
-  dsl:
-    - "contains(body, \"<td class='td' id='pssystemstate'></td>\")"
-
-huawei-vct:
-  dsl:
-    - "contains(body, '<frame name=\"hidden_frame\" id=\"hidden_frame\" src=\"hidden_frame.html\" noresize=\"noresize')"
 
 huawei-wireless-lan:
   dsl:
@@ -1633,9 +1563,9 @@ empirecms:
   dsl:
     - "icon('/favicon.ico', 'fe059ab89e4bc947d28f8b11fb8fe3b7')"
 
-fanwei-eoffice10:
+fanwei-eoffice:
   dsl:
-    - "contains(body, 'eoffice_init')"
+    - "contains(body, 'eoffice_init','szfeatures','eoffice_loading_tip','cubeGridScaleDelay','eui-theme-1')"
 
 asp-net-api:
   dsl:
@@ -1786,7 +1716,8 @@ unibox:
 
 用友bip:
   dsl:
-    - "contains(body, 'iuap-apcom-workbench')"
+    - "contains(body, 'iuap-apcom-workbench','hiprint/css/hiprint.css')"
+    - "icon('/favicon.ico', '801c3933347409db03a31b703ae8483b')"
 
 casdoor:
   dsl:
@@ -1841,11 +1772,6 @@ interlib电子资源馆外访问系统:
     - "contains(body, 'SuperMap iServer')"
     - "contains(body, 'window.location.href=\"iserver\"')"
     - "contains(body, 'iserver/manager')"
-
-万户-ezoffice:
-  dsl:
-    - "contains(body, '/defaultroot')"
-    - "contains(body, 'fa-times-circle-o username_clear')"
 
 北京中科聚网信息技术有限公司一体化运营平台:
   dsl:
@@ -2598,6 +2524,7 @@ yzmcms:
 宝塔:
   dsl:
     - "contains(body, '入口校验失败','您没有将此域名或IP绑定到对应站点!','<title>恭喜，站点创建成功','面板系统后台','系统自动生成','您的请求在Web服务器中没有找到对应的站点','站点创建成功','宝塔Linux面板')"
+    - "icon('/favicon.ico', '9637ebd168435de51fea8193d2d89e39')"
 
 富通天下外贸erp:
   dsl:
@@ -2621,7 +2548,7 @@ yzmcms:
 
 广联达-glodon:
   dsl:
-    - "contains(body, '/ConsoleCommon/Content/weebox.css','JS/DD_belatedPNG.js','/Services/Identification/login.ashx')"
+    - "contains(body, '/ConsoleCommon/Content/weebox.css','/Services/Identification/login.ashx')"
 
 广联达-广讯通:
   dsl:
@@ -3079,7 +3006,6 @@ h3c网管系统:
   dsl:
   - "contains_all(body, '权限问题或行为非法，您的访问被拒绝','Request')"
 
-
 ArcGIS:
   dsl:
   - "contains(body, 'arcgismanager','dojo/dojo/dojo.js')"
@@ -3100,6 +3026,7 @@ next.js:
 React Server:
   dsl:
   - "contains(body, 'React.createElement','react.production.min.js')"
+  - "icon('/favicon.ico', 'c92b85a5b907c70211f4ec25e29a8c4a')"
 
 疑似文件上传表单:
   dsl:
@@ -3141,3 +3068,25 @@ spring-gateway:
 华为防火墙:
   dsl:
   - "contains(body, 'UI_component/ctrl/Button.js','UI_component/ctrl/PanelSuperclass.js')"
+
+万户ezoffice:
+  dsl:
+    - "contains(body, '/defaultroot','万户ezOFFICE协同管理平台','noliving_middle.gif')"
+    - "icon('/favicon.ico', 'fa1f01d0392d60663d8ce936fe06096a')"
+    - "contains(body, 'fa-times-circle-o username_clear')"
+
+信锐物联平台:
+  dsl:
+    - "icon('/favicon.ico', '42611fb3cd40040dc941f454014a105e')"
+
+OpenStack:
+  dsl:
+    - "icon('/favicon.ico', 'd9332f271f2f1c0df5dca81b7a0e3446')"
+
+熊海内容管理系统SeaCMS:
+  dsl:
+    - "contains(body, '欢迎使用 SEACMS','http://www.isea','seacms-style.css')"
+
+华为VPN:
+  dsl:
+    - "contains(body, '>MAC地址绑定认证的用户，请使用IE浏览器并','?portalindex=0&res=1','form.userIpMac.value = document.getElementById(\"userIpMacVal\").value')"
