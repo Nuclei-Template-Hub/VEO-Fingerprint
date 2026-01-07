@@ -525,7 +525,7 @@ jeecgboot:
   dsl:
     - "contains(body,'.app-loading','.app-loading-title','.app-loading-wrap')"
     - "contains(body, 'jeecg-boot','casPrefixUrl')"
-    # - "contains_all(body, 'absolute','9999999999999','#FFF','Open Sans','load_title')"
+    - "contains_all(body, 'absolute','9999999999999','#FFF','Open Sans','load_title')"
 
 jeecms:
   dsl:
@@ -1764,7 +1764,6 @@ interlib电子资源馆外访问系统:
   dsl:
     - "contains(body, 'demo/reportJsp/showReport.jsp')"
     - "contains(body, 'dashboard/dashboard.rpx')"
-    - "contains(body, 'ServletException','NullPointerException')"
     - "contains(body, 'alert(null)')"
 
 超图软件SuperMap-iServer:
@@ -3090,3 +3089,8 @@ OpenStack:
 华为VPN:
   dsl:
     - "contains(body, '>MAC地址绑定认证的用户，请使用IE浏览器并','?portalindex=0&res=1','form.userIpMac.value = document.getElementById(\"userIpMacVal\").value')"
+
+ZLMediaKit:
+  tags: red,rce
+  dsl:
+  - "contains(header, 'ZLMediaKit-')"
